@@ -57,7 +57,8 @@
 
 8. Provisioning Services
     - [CloudFormation](https://docs.aws.amazon.com/cloudformation/?id=docs_gateway) - `Evgeniy Penzev`
-    - [Service Catalog](https://docs.aws.amazon.com/servicecatalog/?id=docs_gateway) - `Alexander Susha`
+    - [Service Catalog](https://docs.aws.amazon.com/servicecatalog/?id=docs_gateway) 
+    - SSM - `Alexander Susha`
 
 9. Observability Services
     - [CloudWatch](https://docs.aws.amazon.com/cloudwatch/?id=docs_gateway) - `Vladislav Tarasevich`
