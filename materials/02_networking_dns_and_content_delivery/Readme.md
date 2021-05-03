@@ -166,6 +166,8 @@ The following diagram illustrates the layers of security provided by security gr
 
 ## Network Address Translation (NAT) Instances and NAT Gateways
 
+![](https://i.stack.imgur.com/2ihm3.png)
+
 By default, any instance that you launch into a private subnet in an Amazon VPC is not able to communicate with the Internet through the IGW. This is problematic if the instances within private subnets need direct access to the Internet from the Amazon VPC in order to apply security updates, download patches, or update application software. AWS provides NAT instances and NAT gateways to allow instances deployed in private subnets to gain Internet access. For common use cases, we recommend that you use a NAT gateway instead of a NAT instance. The NAT gateway provides better availability and higher bandwidth, and requires
 less administrative effort than NAT instances. 
 
