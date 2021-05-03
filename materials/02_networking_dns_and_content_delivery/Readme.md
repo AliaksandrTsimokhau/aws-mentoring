@@ -31,19 +31,19 @@ Amazon Virtual Private Cloud (Amazon VPC) lets you provision a logically isolate
 
 ### Concepts for VPCs: 
 
-**Virtual private cloud (VPC)** — A virtual network dedicated to your AWS account. 
+    **Virtual private cloud (VPC)** — A virtual network dedicated to your AWS account. 
 
-**Subnet** — A range of IP addresses in your VPC. 
+    **Subnet** — A range of IP addresses in your VPC. 
 
-**Route table** — A set of rules, called routes, that are used to determine where network traffic is directed to. 
+    **Route table** — A set of rules, called routes, that are used to determine where network traffic is directed to. 
 
-**Internet gateway** — A gateway that you attach to your VPC to enable communication between resources in your VPC and the internet. 
+    **Internet gateway** — A gateway that you attach to your VPC to enable communication between resources in your VPC and the internet. 
 
-**VPC endpoint** — Enables you to privately connect your VPC to supported AWS services and VPC endpoint services powered by PrivateLink without requiring an internet gateway, NAT device, VPN connection, or AWS Direct Connect connection. Instances in your VPC do not require public IP addresses to communicate with resources in the service. Traffic between your VPC and the other service does not leave the Amazon network.  
+    **VPC endpoint** — Enables you to privately connect your VPC to supported AWS services and VPC endpoint services powered by PrivateLink without requiring an internet gateway, NAT device, VPN connection, or AWS Direct Connect connection. Instances in your VPC do not require public IP addresses to communicate with resources in the service. Traffic between your VPC and the other service does not leave the Amazon network.  
 
-**CIDR block** — Classless Inter-Domain Routing. An internet protocol address allocation and route aggregation methodology. For more information, see Classless Inter-Domain Routing in Wikipedia. 
+    **CIDR block** — Classless Inter-Domain Routing. An internet protocol address allocation and route aggregation methodology. For more information, see Classless Inter-Domain Routing in Wikipedia. 
 
-**Use cases / Considerations**
+### Use cases / Considerations
 
 What can we do with a VPC? 
 
@@ -59,7 +59,7 @@ What can we do with a VPC?
 ## Governance 
 
 Monitoring tools/service: 
-- VPC Flow logs 
+- [VPC Flow logs](#vpc-flow-logs)
 - CloudWatch 
 
 ## Cautions 
