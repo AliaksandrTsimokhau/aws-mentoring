@@ -8,8 +8,13 @@
 - [Elastic IP Addresses]()
 - [VPC security]()
 - [VPC Flow Logs]()
+## Video:
 
-<iframe width="1190" height="669" src="https://www.youtube.com/embed/fpxDGU2KdkA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+- https://www.youtube.com/embed/fpxDGU2KdkA
+- https://www.youtube.com/watch?v=bGDMeD6kOz0
+- https://www.youtube.com/watch?v=hiKPPy584Mg
+- https://www.youtube.com/watch?v=_A5L4jT-K9I
+- https://www.youtube.com/watch?v=aczp7gCZZlQ
 
 ## Service Overview 
 
