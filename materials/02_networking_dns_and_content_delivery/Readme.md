@@ -108,7 +108,8 @@ an address range of `10.0.0.0/24`, a route table, an attached IGW (Internet Gate
 The route table contains two routes: the local route that permits inter-VPC communication and a route that sends all non-local traffic to the IGW (igw-id). Note that the Amazon EC2 instance has a public IP address (EIP, 198.51.100.2); this instance can be accessed from the Internet, and traffic may originate and
 return to this instance.
 
-![](images/2.2.jpg)
+![](https://www.mynetworkdojo.com/wp-content/uploads/2019/08/AWS-VPC-2.png)
+![](https://qph.fs.quoracdn.net/main-qimg-c8adbe652188ddc88070dc9b4f0ae91e)
 
 ## More Complex Set up:
 
