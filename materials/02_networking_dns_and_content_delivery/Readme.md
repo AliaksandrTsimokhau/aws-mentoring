@@ -8,6 +8,7 @@
 - [Elastic Network Interfaces](elastic-network-interfaces-enis)
 - [Elastic IP Addresses](#elastic-ip-addresses-eips)
 - [VPC security](#vpc-security)
+- [NAT Instances and NAT Gateways](#network-address-translation-nat-instances-and-nat-gateways)
 - [VPC Flow Logs](#vpc-flow-logs)
 ## Video:
 
