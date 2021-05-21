@@ -11,17 +11,14 @@
 - [NAT Instances and NAT Gateways](#network-address-translation-nat-instances-and-nat-gateways)
 - [VPC Peering](#vpc-peering)
 - [VPC Flow Logs](#vpc-flow-logs)
-## Video:
+
+## Videos:
 
 - https://www.youtube.com/embed/fpxDGU2KdkA
 - https://www.youtube.com/watch?v=bGDMeD6kOz0
 - https://www.youtube.com/watch?v=hiKPPy584Mg
 - https://www.youtube.com/watch?v=_A5L4jT-K9I
 - https://www.youtube.com/watch?v=aczp7gCZZlQ
-
-
-[![aaa](http://img.youtube.com/vi/fpxDGU2KdkA/0.jpg)](http://www.youtube.com/watch?v=fpxDGU2KdkA "aaa")
-
 
 ## VPC Overview 
 
