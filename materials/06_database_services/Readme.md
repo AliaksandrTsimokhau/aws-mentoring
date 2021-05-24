@@ -64,7 +64,7 @@ For working with data, you can access Amazon DynamoDB using the AWS Management C
 
 ### Use cases / Considerations 
 
-![](images/nosql-dynamodb-mongodb-faunadb-foundationdb-1.png)
+![](images/no-sql-simple-app.png)
 
 Whenever SQL database (like RDS) is not suitable for your needs (e.g., data structure is not the same across all items), DynamoDB is a great choice for such cases. 
 
