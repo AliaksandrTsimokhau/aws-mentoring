@@ -40,6 +40,9 @@ An Amazon ECS cluster is a logical grouping of **tasks** (a logical group of con
 
 ![](images/alpine-aws-arch.png)
 
+**AWS Fargate Support**
+
+AWS Fargate technology is available with Amazon ECS. With AWS Fargate, you no longer have to select Amazon EC2 instance types, provision and scale clusters, or patch and update each server. You do not have to worry about task placement strategies, such as binpacking or host spread and tasks are automatically balanced across availability zones. Fargate manages the availability of containers for you. You just define your application’s requirements, select Fargate as your launch type in the console or CLI, and Fargate takes care of all the scaling and infrastructure management required to run your containers.
 <!-- 
 You can run them by choosing on of the following launch types:
 
@@ -82,6 +85,9 @@ EKS runs the Kubernetes control plane across multiple AWS Availability Zones, au
 
 EKS automatically applies the latest security patches to your cluster’s control plane. AWS works closely with the community to address critical security issues and help ensure that every EKS cluster is secure.
 
+**Serverless Compute**
+
+EKS supports AWS Fargate to run your Kubernetes applications using serverless compute. Fargate removes the need to provision and manage servers, lets you specify and pay for resources per application, and improves security through application isolation by design.
 ### Pricing considerations 
 
 With AWS EKS, you have to pay for: 
