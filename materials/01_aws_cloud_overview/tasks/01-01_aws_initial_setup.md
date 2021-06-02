@@ -1,3 +1,10 @@
+>## ! DISCLAIMER
+>Despite the most of the labs in this course can be done using the AWS free tier, i.e. without any charging, there a couple of tasks that require creation of paid resources.
+Resources like NAT Gateway, Route53 zone etc., will cost you some money (but not that much, fortunately). Anyway, before creating any type of resources, please be sure you carefully read and understood the appropriate pricing policy. Every type of resource is AWS has its own pricing page, for example [Route53 pricing](https://aws.amazon.com/route53/pricing/). If you cannot find the pricing policy in official AWS documentation, just google it, for example "NAT gateway pricing".
+To avoid extra money expenditures, you can [set up a billing alert](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/monitor_estimated_charges_with_cloudwatch.html) that will notify you immediately after you have reached some threshold in your billing.
+And of course, do not forget cleaning up all the unnecessary resources after completing the lab.
+
+
 # AWS Initial setup.
 
 ## Agenda.
@@ -5,9 +12,10 @@
    1. [AWS Account creation](#1-aws-account-creation)
    2. [Signing in with Root user](#2-signing-in-with-root-user)
    3. [Enabling a virtual multi-factor authentication (MFA) device](#3-enabling-a-virtual-multi-factor-authentication-mfa-device-console)
-   4. [Creating an IAM user in your AWS account](#4.-Creating-an-IAM-user-in-your-AWS-account.)
-   5. [Set Up the AWS Command Line Interface (AWS CLI)](#5.-Set-Up-the-AWS-Command-Line-Interface-\(AWS-CLI\))
-   6. [Creating a Billing Alarm to Monitor Your Estimated AWS Charges](#6.-Creating-a-Billing-Alarm-to-Monitor-Your-Estimated-AWS-Charges)
+   4. [Checking your Limits and navigating AWS console](#4-checking-your-limits-and-navigating-aws-console)
+   5. [Creating an IAM user in your AWS account](#5-creating-an-iam-user-in-your-aws-account)
+   6. [Set Up the AWS Command Line Interface (AWS CLI)](#6-set-up-the-aws-command-line-interface-aws-cli)
+   7. [Creating a Billing Alarm to Monitor Your Estimated AWS Charges](#7-creating-a-billing-alarm-to-monitor-your-estimated-aws-charges)
 <br><br>
 
 ---
@@ -124,9 +132,19 @@ Wait up to 30 seconds for the device to generate a new number, and then type the
    
 The device is ready for use with AWS. For information about using MFA with the AWS Management Console, see [Using MFA devices with your IAM sign-in page](https://docs.aws.amazon.com/IAM/latest/UserGuide/console_sign-in-mfa.html)
    
-   
 ---
-## 4. Creating an IAM user in your AWS account.
+## 4. Checking your Limits and navigating AWS console
+Please watch the video and follow the same steps. <br><br>
+[![](images/check_your_limits_youtube.png)](https://youtu.be/hG18UrncJ74?list=RDCMUC1Yf7IBfhSNFTIyb7v83o_g)
+
+
+---
+## 5. Creating an IAM user in your AWS account.
+
+**Please watch the video and follow the guide:** <br><br>
+[![](images/create_iam_user_youtube.png)](https://youtu.be/qYelauL9s5Q?list=RDCMUC1Yf7IBfhSNFTIyb7v83o_g)
+<br><br><br>
+#### ***Text version (can be slightly different because it's different source)***
 
 Source: [Creating an IAM user](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html)
 
@@ -140,15 +158,15 @@ The process of creating a user and enabling that user to perform work tasks cons
 
 ### Creating IAM users (console).
 
-4.1. Login AWS Console and open IAM Service
+5.1. Login AWS Console and open IAM Service
 
 ![](images/create_iam_user.png)
 
-4.2. Select “Users” in left menu and click “Add user” button
+5.2. Select “Users” in left menu and click “Add user” button
 
 ![](images/create_iam_user_add_user_button.png)
 
-4.3. Select the type of access this set of users will have. You can select programmatic access, access to the AWS Management Console, or both:
+5.3. Select the type of access this set of users will have. You can select programmatic access, access to the AWS Management Console, or both:
 
 - Select **Programmatic access** if the users require access to the API, AWS CLI, or Tools for Windows PowerShell. This creates an access key for each new user. You can view or download the access keys when you get to the **Final** page.
 - Select **AWS Management Console access** if the users require access to the AWS Management Console. This creates a password for each new user.
@@ -163,9 +181,9 @@ For Console password, choose one of the following:
 - **Custom password**. Each user is assigned the password that you type in the box.
 
 
-4.4. Choose **Next: Permissions**
+5.4. Choose **Next: Permissions**
 
-4.5. On the next screen you have 3 options:
+5.5. On the next screen you have 3 options:
 
 - **Add user to group**. Choose this option if you want to assign the users to one or more groups that already have permissions policies. IAM displays a list of the groups in your account, along with their attached policies. You can select one or more existing groups, or choose Create group to create a new group. For more information, see [Changing permissions for an IAM user](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_change-permissions.html).
 
@@ -181,39 +199,39 @@ As in our case we are aiming to create IAM user with Full administrative access,
 
 **Set permissions boundary** is OPTIONAL parameter , used for Advanced configuration of permissions. We can keep it empty or select **AdministratorAccess** as well.
 
-4.6. Choose **Next: Tags**.
+5.6. Choose **Next: Tags**.
 
-4.7. (Optional) Add metadata to the user by attaching tags as key-value pairs. For more information about using tags in IAM, see [Tagging IAM resources](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_tags.html)
+5.7. (Optional) Add metadata to the user by attaching tags as key-value pairs. For more information about using tags in IAM, see [Tagging IAM resources](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_tags.html)
 
 ![](images/create_iam_user_add_tags.png)
 
 
-4.8. Choose **Next: Review** to see all of the choices you made up to this point.<br>
+5.8. Choose **Next: Review** to see all of the choices you made up to this point.<br>
 
 ![](images/create_iam_user_review.png)
 
 When you are ready to proceed, choose **Create user**.
  
-4.9. To view the users' access keys (access key IDs and secret access keys), choose **Show** next to each password and access key that you want to see. To save the access keys, choose **Download .csv** and then save the file to a safe location.
+5.9. To view the users' access keys (access key IDs and secret access keys), choose **Show** next to each password and access key that you want to see. To save the access keys, choose **Download .csv** and then save the file to a safe location.
 ![](images/create_iam_user_success_confirmation.png)
 
 > **Important**
 > This is your only opportunity to view or download the secret access keys, and you must provide this information to your users before they can use the AWS API. Save the user's new access key ID and secret access key in a safe and secure place. **You will not have access to the secret keys again after this step**.
 
 
-4.10. Congratulations! You have created your first **IAM User**<br>
+5.10. Congratulations! You have created your first **IAM User**<br>
 
 ![](images/create_iam_user_dashboard_with_user.png)
 
-4.11. It’s strongly recommended to enable **MFA** for **IAM user**.
+5.11. It’s strongly recommended to enable **MFA** for **IAM user**.
 
-4.12. Open it, click on **Manage** link in front of **Assigned MFA Device**  and follow the same instructions like it’s done for **Root user**<br>
+5.12. Open it, click on **Manage** link in front of **Assigned MFA Device**  and follow the same instructions like it’s done for **Root user**<br>
 ![](images/create_iam_user_enable_mfa_for_iam_user.png)
 
 ---
-## 5. Set Up the AWS Command Line Interface (AWS CLI).
+## 6. Set Up the AWS Command Line Interface (AWS CLI).
 
-### 5.1. What is the AWS Command Line Interface?
+### 6.1. What is the AWS Command Line Interface?
 The AWS Command Line Interface (AWS CLI) is an open source tool that enables you to interact with AWS services using commands in your command-line shell. With minimal configuration, the AWS CLI enables you to start running commands that implement functionality equivalent to that provided by the browser-based AWS Management Console from the command prompt in your terminal program:
 
 - **Linux shells** – Use common shell programs such as [bash](https://www.gnu.org/software/bash/), [zsh](http://www.zsh.org/), and [tcsh](https://www.tcsh.org/) to run commands in Linux or macOS.
@@ -223,7 +241,7 @@ The AWS Command Line Interface (AWS CLI) is an open source tool that enables you
 All IaaS (infrastructure as a service) AWS administration, management, and access functions in the AWS Management Console are available in the AWS API and AWS CLI. New AWS IaaS features and services provide full AWS Management Console functionality through the API and CLI at launch or within 180 days of launch.
 The AWS CLI provides direct access to the public APIs of AWS services. You can explore a service's capabilities with the AWS CLI, and develop shell scripts to manage your resources. In addition to the low-level, API-equivalent commands, several AWS services provide customizations for the AWS CLI. Customizations can include higher-level commands that simplify using a service with a complex API.
 
-### 5.2. AWS CLI versions.
+### 6.2. AWS CLI versions.
 
 The AWS CLI is available in two versions and information in this guide applies to both versions unless stated otherwise.
 - **Version 2.x** – The current, generally available release of the AWS CLI that is intended for use in production environments.
@@ -231,7 +249,7 @@ The AWS CLI is available in two versions and information in this guide applies t
 
 For more information on the different versions, see [About the AWS CLI versions](https://docs.aws.amazon.com/cli/latest/userguide/welcome-versions.html)
 
-### 5.3. Installation.
+### 6.3. Installation.
 
 Please use [official guide](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html) for installation depending on your Operation System:
 - [Docker](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-docker.html)
@@ -252,7 +270,7 @@ $ aws --version
 aws-cli/2.1.29 Python/3.7.4 Darwin/18.7.0 botocore/2.0.0
 ```
 
-### 5.4. Basic Configuration.
+### 6.4. Basic Configuration.
 
 Source: [AWS CLI Quick Start](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html )
 <br>
@@ -319,7 +337,15 @@ $ aws s3 ls
 ```
 
 ---
-## 6. Creating a Billing Alarm to Monitor Your Estimated AWS Charges.
+## 7. Creating a Billing Alarm to Monitor Your Estimated AWS Charges.
+
+**Please watch the video and follow the guide:**
+
+[![](images/create_billing_alert_youtube.png)](https://youtu.be/p3i4NSCVTT4?list=RDCMUC1Yf7IBfhSNFTIyb7v83o_g)
+
+
+#### ***Text version (can be slightly different because it's different source)***
+
 Source: [Monitor estimated charges with CloudWatch](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/monitor_estimated_charges_with_cloudwatch.html)
 
 You can monitor your estimated AWS charges by using Amazon CloudWatch. When you enable the monitoring of estimated charges for your AWS account, the estimated charges are calculated and sent several times daily to CloudWatch as metric data.
@@ -334,59 +360,59 @@ Tasks:
 - [Enabling Billing Alerts](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/monitor_estimated_charges_with_cloudwatch.html#turning_on_billing_metrics)
 - [Creating a Billing Alarm](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/monitor_estimated_charges_with_cloudwatch.html#creating_billing_alarm_with_wizard)
 
-### 6.1. Enabling Billing Alerts.
+### 7.1. Enabling Billing Alerts.
 Before you can create an alarm for your estimated charges, you must enable billing alerts, so that you can monitor your estimated AWS charges and create an alarm using billing metric data. After you enable billing alerts, you can't disable data collection, but you can delete any billing alarms that you created.
 
 After you enable billing alerts for the first time, it takes about 15 minutes before you can view billing data and set billing alarms.
 
-6.1.1 Login with root account or as an IAM user that has been given permission to view billing information.
+7.1.1 Login with root account or as an IAM user that has been given permission to view billing information.
 
-6.1.2 Open the Billing and Cost Management console at https://console.aws.amazon.com/billing
+7.1.2 Open the Billing and Cost Management console at https://console.aws.amazon.com/billing
 
-6.1.3 In the navigation pane, choose **Billing Preferences**.
+7.1.3 In the navigation pane, choose **Billing Preferences**.
 
 ![](images/create_billing_alarm_enabling_billing.png)
 
-6.1.4 Choose **Receive Billing Alerts**.
-6.1.5 Choose **Save preferences**.
+7.1.4 Choose **Receive Billing Alerts**.
+7.1.5 Choose **Save preferences**.
 
 
-## 6.2 Creating a Billing Alarm.
+## 7.2 Creating a Billing Alarm.
 
 To create a billing alarm using the CloudWatch console
 
-6.2.1 Open the CloudWatch console at https://console.aws.amazon.com/cloudwatch/
+7.2.1 Open the CloudWatch console at https://console.aws.amazon.com/cloudwatch/
 
-6.2.2 If necessary, change the Region to US East (N. Virginia). Billing metric data is stored in this Region and represents worldwide charges.
+7.2.2 If necessary, change the Region to US East (N. Virginia). Billing metric data is stored in this Region and represents worldwide charges.
 
 ![](images/create_billing_alarm_billing_preferences.png)
 
-6.2.3 In the navigation pane, choose **Alarms, Create Alarm**.
+7.2.3 In the navigation pane, choose **Alarms, Create Alarm**.
 
 ![](images/create_billing_alarm_click_button.png)
 
-6.2.4 Choose **Select metric**. In the **All metrics** tab, choose **Billing, Total Estimated Charge**.
+7.2.4 Choose **Select metric**. In the **All metrics** tab, choose **Billing, Total Estimated Charge**.
 
 If you don't see **Billing** or the **Total Estimated Charge metric**, you may need to enable billing alerts. 
 For more information, see [Enabling Billing Alerts](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/monitor_estimated_charges_with_cloudwatch.html#turning_on_billing_metrics).
 
-6.2.5 Select the check box next to **EstimatedCharges**, and choose **Select metric**.
+7.2.5 Select the check box next to **EstimatedCharges**, and choose **Select metric**.
 
 ![](images/create_billing_alarm_specify_metrics.png)
 
-6.2.6 Under **Conditions**, choose **Static**.
+7.2.6 Under **Conditions**, choose **Static**.
 
-6.2.7 For **Whenever EstimatedCharges is**, choose **Greater**.
+7.2.7 For **Whenever EstimatedCharges is**, choose **Greater**.
 
-6.2.8 For **than**, enter the monthly amount (for example, ***200***) that must be exceeded to trigger the alarm.
+7.2.8 For **than**, enter the monthly amount (for example, ***200***) that must be exceeded to trigger the alarm.
 
 **Note** The preview graph displays your current charges for the month
 
 ![](images/create_billing_alarm_conditions.png)
 
-6.2.9 Choose **Next**.
+7.2.9 Choose **Next**.
 
-6.2.10 For **Select an SNS topic**, select an SNS topic to notify when the alarm is in ALARM state, 
+7.2.10 For **Select an SNS topic**, select an SNS topic to notify when the alarm is in ALARM state, 
 or create a new topic to be notified.
 
 To have the alarm send multiple notifications for the same alarm state or for different alarm states, 
@@ -395,29 +421,29 @@ choose **Add notification**.
 ![](images/create_billing_alarm_configure_actions.png)
 <br><br><br>
 
-6.2.11 When finished, choose **Next**.
+7.2.11 When finished, choose **Next**.
 
-6.2.12 Enter a name and description for the alarm. 
+7.2.12 Enter a name and description for the alarm. 
 The name must contain only ASCII characters. Then choose **Next**.
 
 ![](images/create_billing_alarm_add_name.png)
 
-6.2.13 Under **Preview and create**, 
+7.2.13 Under **Preview and create**, 
 confirm that the information and conditions are what you want, then choose **Create alarm**.
 
 ![](images/create_billing_alarm_cpreview.png)
 
-6.2.14 On Dashboard you will find just created Alarm . It will be in “Pending Confirmation” state.
+7.2.14 On Dashboard you will find just created Alarm . It will be in “Pending Confirmation” state.
 
 ![](images/create_billing_alarm_pending_confirmation.png)
 
-6.2.15 Go to your email box, you should find email to confirm subscription.
+7.2.15 Go to your email box, you should find email to confirm subscription.
 
 ![](images/create_billing_alarm_confirmation_email.png)
 
-6.2.16 After confirmation you will see the following picture (state: ok, no “pending confirmation” in Actions):
+7.2.16 After confirmation you will see the following picture (state: ok, no “pending confirmation” in Actions):
 
 ![](images/create_billing_alarm_final.png)
 
-6.2.17 **Congratulations!** You’ve completed with you budget alarm creation.
+7.2.17 **Congratulations!** You’ve completed with you budget alarm creation.
 
