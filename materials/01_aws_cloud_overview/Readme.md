@@ -1,5 +1,4 @@
 
-
 >## ! DISCLAIMER
 >Despite the most of the labs in this course can be done using the AWS free tier, i.e. without any charging, there a couple of tasks that require creation of paid resources.
 Resources like NAT Gateway, Route53 zone etc., will cost you some money (but not that much, fortunately). Anyway, before creating any type of resources, please be sure you carefully read and understood the appropriate pricing policy. Every type of resource is AWS has its own pricing page, for example [Route53 pricing](https://aws.amazon.com/route53/pricing/). If you cannot find the pricing policy in official AWS documentation, just google it, for example "NAT gateway pricing".
@@ -15,7 +14,8 @@ And of course, do not forget cleaning up all the unnecessary resources after com
 
 ## AWS Fundamentals. 
 ### Core Concepts
-Please learn carefully the following AWS Fundamentals course: [AWS FUNDAMENTALS](https://aws.amazon.com/getting-started/fundamentals-core-concepts/)
+Please learn carefully the following AWS Fundamentals course: 
+>Click here >> [AWS FUNDAMENTALS](https://aws.amazon.com/getting-started/fundamentals-core-concepts/)
 
 This AWS Fundamentals Course is designed to teach you the core concepts you need to work effectively within AWS.
 When first starting, AWS can seem overwhelming. A cloud-native paradigm of building infrastructure can be a radical departure from the traditional on-premises way of doing things. And regardless if this is your first time working with infrastructure or you've been tuning Linux kernels for the last decade, it can be hard to know where to start with AWS's selection of over 175 services.
