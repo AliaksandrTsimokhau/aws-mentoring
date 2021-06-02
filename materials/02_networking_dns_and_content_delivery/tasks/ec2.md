@@ -95,7 +95,7 @@ Requirements:
 - Shutdown behavior: `Terminate`
 - Name tag: `private-host`
 
-### Connect to the host in private Network:
+### Connect to the host in Private Network:
 
 Create ssh config file (`~/.ssh/config`):
 ```
