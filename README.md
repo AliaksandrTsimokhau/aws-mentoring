@@ -1,3 +1,5 @@
+![](https://dunhamconnect.com/wp-content/uploads/aws-migration-1200x675.jpg)
+
 # AWS Mentoring
 
 ## Domains:
@@ -11,93 +13,91 @@
 - Storage and Data Management
 ## Table of Content
 
-1. AWS Cloud Overview
-    - AWS Fundamentals
-    - Regions and Zones - `Siarhei Mishchanka`
-    - Access and manage Amazon Web Services
-    - Protecting your AWS account - `Yury Shchanouski`
-    - Logging and Monitoring - `Siarhei Hreben`
-    - Taking care of Billing in Cloud - `Kanstantsin Klimov`
+#### 1. [AWS Cloud Overview](/materials/01_aws_cloud_overview/Readme.md):
+- AWS Fundamentals
+- Regions and Zones
+- Access and manage Amazon Web Services
+- Protecting your AWS account
+- Logging and Monitoring
+- Taking care of Billing in Cloud
+- [**Practice**](/materials/01_aws_cloud_overview/tasks/Readme.md)
 
-2. Networking, DNS and Content Delivery
-    - [VPN](https://docs.aws.amazon.com/vpn/?id=docs_gateway)/[VPC](https://docs.aws.amazon.com/vpc/?id=docs_gateway) - `Andrei Niasiuk`
-    - VPC Flow Logs - `Siarhei Hreben`
-    - [Route53](https://docs.aws.amazon.com/route53/?id=docs_gateway) - `Andrei Niasiuk`
-    - [CloudFront](https://docs.aws.amazon.com/cloudfront/?id=docs_gateway) - `Heorhi Sakovich`
 
-3. Compute Services
-    - [Elastic Compute Cloud](https://docs.aws.amazon.com/ec2/?id=docs_gateway) - `Denis Azarov`
-    - [AutoScaling](https://docs.aws.amazon.com/autoscaling/?id=docs_gateway) - `Heorhi Sakovich`
-    - [Elastic LoadBalancing](https://docs.aws.amazon.com/elasticloadbalancing/?id=docs_gateway) - `Aleh Tsuranau​​​​​​​`
-    - Monitoring (EC2, LB) - `Kanstantsin Klimov`, `Vladislav Tarasevich`, `Siarhei Hreben`
+#### 2. [Networking, DNS and Content Delivery](/materials/02_networking_dns_and_content_delivery/Readme.md)
+- VPC
+- VPC Flow Logs
+- Route53
+- CloudFront
+- [**Practice**](/materials/02_networking_dns_and_content_delivery/tasks/Readme.md)
 
-4. Container Services
-    - [Elastic Container Registry](https://docs.aws.amazon.com/ecr/?id=docs_gateway) - `Aleh Tsuranau`
-    - [Elastic Container Service](https://docs.aws.amazon.com/ecs/?id=docs_gateway) - `Aleh Tsuranau`
-    - [Elastic Kubernetes Service](https://docs.aws.amazon.com/eks/?id=docs_gateway) - `Raman Bahatyrou​​​​​​​`
-    - Monitoring and Logging
 
-5. Storage Services
-    - [S3](https://docs.aws.amazon.com/s3/?id=docs_gateway), [S3 Glacier](https://docs.aws.amazon.com/s3/?id=docs_gateway) - `Egor Komarov`
-    - [Elastic Block Store](https://docs.aws.amazon.com/ebs/?id=docs_gateway) - `Egor Komarov`
-    - [Elastic File System](https://docs.aws.amazon.com/efs/?id=docs_gateway) - `Egor Komarov`, `Yury Hancharuk`
-    - [FSx](https://docs.aws.amazon.com/fsx/?id=docs_gateway) - `Egor Komarov`
-    - [Storage Gateway](https://docs.aws.amazon.com/storagegateway/?id=docs_gateway) - `Egor Komarov`
-    - [AWS Backup](https://docs.aws.amazon.com/aws-backup/?id=docs_gateway) - `Egor Komarov`
+#### 3. [Compute Services](/materials/03_compute_services/Readme.md)
+- Elastic Compute Cloud
+- AutoScaling
+- Elastic LoadBalancing
+- Monitoring (EC2, LB)
+- [**Practice**](/materials/03_compute_services/tasks/Readme.md)
 
-6. Database Services
-    - Relational Database Service (RDS) - `Heorhi Sakovich​​​​​​​`
-    - NoSQL database Services: [DynamoDB](https://docs.aws.amazon.com/dynamodb/?id=docs_gateway), [DocumentDB](https://docs.aws.amazon.com/documentdb/?id=docs_gateway) - `Raman Bahatyrou`
-    - [ElastiCache](https://docs.aws.amazon.com/elasticache/?id=docs_gateway) - `Raman Bahatyrou`
-    - Monitoring and Logging - `Vladislav Tarasevich`
 
-7. Functions and API Gateway
-    - [Lambda](https://docs.aws.amazon.com/lambda/?id=docs_gateway) - `Sergei Shevtsov​​​​​​​`
-    - [API GW](https://docs.aws.amazon.com/apigateway/?id=docs_gateway) - `Sergei Shevtsov​​​​​​​`
+#### 4. [Container Services](/materials/04_container_services/Readme.md)
+- Elastic Container Registry
+- Elastic Container Service
+- Elastic Kubernetes Service
+- Monitoring and Logging
+- [**Practice**](/materials/04_container_services/tasks/Readme.md)
 
-8. Provisioning Services
-    - [CloudFormation](https://docs.aws.amazon.com/cloudformation/?id=docs_gateway) - `Evgeniy Penzev`
-    - [Service Catalog](https://docs.aws.amazon.com/servicecatalog/?id=docs_gateway) 
-    - SSM - `Alexander Susha`
+#### 5. [Storage Services](/materials/05_storage_services/Readme.md)
+- S3, S3 Glacier
+- Elastic Block Store
+- Elastic File System
+- FSx
+- Storage Gateway
+- AWS Backup
+- [**Practice**](/materials/05_storage_services/tasks/Readme.md)
 
-9. Observability Services
-    - [CloudWatch](https://docs.aws.amazon.com/cloudwatch/?id=docs_gateway) - `Vladislav Tarasevich`
-    - [EventBridge](https://docs.aws.amazon.com/eventbridge/?id=docs_gateway)
-    - [AWS Health](https://docs.aws.amazon.com/health/?id=docs_gateway) - `Vladislav Tarasevich`
-    - [AWS Config](https://docs.aws.amazon.com/config/?id=docs_gateway) - `Siarhei Hreben`
+#### 6. [Database Services](materials/06_database_services/Readme.md)
+- Relational Database Service (RDS)
+- NoSQL database Services: DynamoDB, DocumentDB
+- ElastiCache
+- Monitoring and Logging
+- [**Practice**](/materials/06_database_services/tasks/Readme.md)
+#### 7. [Functions and API Gateway](/materials/07_functions_and_api_gateway/Readme.md)
+- API GW
+- Lambda
+- [**Practice**](/materials/07_functions_and_api_gateway/tasks/Readme.md)
 
-10. Security, Identity, & Compliance
-    - [Identity and Access Management](https://docs.aws.amazon.com/iam/?id=docs_gateway) - `Yury Shchanouski`
-    - [WAF & Shield](https://docs.aws.amazon.com/waf/?id=docs_gateway) - `Yury Shchanouski`
-    - [Secrets Manager](https://docs.aws.amazon.com/secretsmanager/?id=docs_gateway) - `Pavel Hardzeyeu`
-    - ACM - `Yury Shchanouski`
-    - [Key Management Service](https://docs.aws.amazon.com/kms/?id=docs_gateway) - `Pavel Hardzeyeu`
-    - [Security Hub](https://docs.aws.amazon.com/securityhub/?id=docs_gateway) - `Yury Shchanouski`
-    - [Resource Groups & Tagging](https://docs.aws.amazon.com/ARG/latest/userguide/welcome.html)
-    - [AWS Firewall Manager](https://docs.aws.amazon.com/firewall-manager/?id=docs_gateway) - `Yury Shchanouski`
-    - [AWS Network Firewall](https://docs.aws.amazon.com/network-firewall/?id=docs_gateway) - `Yury Shchanouski`
+#### 8. [Provisioning Services](/materials/08_provisioning_services/Readme.md)
+- CloudFormation
+- Service Catalog
+- SSM
+- [**Practice**](/materials/08_provisioning_services/tasks/Readme.md)
 
-11. Management & Customer Enablement
-    - [Support Center](https://aws.amazon.com/premiumsupport/?id=docs_gateway)
-    - [Service Quotas](https://docs.aws.amazon.com/servicequotas/?id=docs_gateway)
-    - [CloudTrail](https://docs.aws.amazon.com/cloudtrail/?id=docs_gateway) - `Vladislav Tarasevich`
-    - [Trusted Advisor](https://docs.aws.amazon.com/aws-support/?id=docs_gateway) - `Siarhei Mishchanka`
+#### 9. [Observability Services](/materials/09_observability_services/Readme.md)
+- CloudWatch
+- EventBridge
+- AWS Health
+- AWS Config
+- [**Practice**](/materials/09_observability_services/tasks/Readme.md)
 
-12. AWS Certification Pathways
-    - https://aws.amazon.com/training/?id=docs_gateway
+#### 10. [Security, Identity & Compliance](/materials/10_security_identity_&_compliance/README.md)
 
-## Backlog Items:
-- Batch - `Siarhei Hryschanka`
-- AWS Marketplace Subscriptions
-- Resource Groups & Tag Editor
-- Lightsail
-- EC2 Image Builder
-- Elastic Beanstalk (Evgeniy Penzev)
-- X-Ray
-- CodeArtifact
-- ServiceCatalog (Evgeniy Penzev)
-- LaunchWizard
-- AWS Well-Architected Tool
-- AWS Compute Optimizer
-- AWS Budgets
-- Managed Services
+- Identity and Access Management
+- WAF & Shield
+- Secrets Manager
+- ACM
+- Key Management Service
+- Security Hub
+- Resource Groups & Tagging
+- AWS Firewall Manager
+- AWS Network Firewall
+- [**Practice**](/materials/10_security_identity_&_compliance/tasks/Readme.md)
+
+#### 11. [Management & Customer Enablement](/materials/11_management_&_customer_enablement/Readme.md)
+- Support Center
+- Service Quotas
+- CloudTrail
+- Trusted Advisor
+- [**Practice**](/materials/11_management_&_customer_enablement/tasks/Readme.md)
+
+#### 12. AWS Certification Pathways
+- https://aws.amazon.com/training/?id=docs_gateway

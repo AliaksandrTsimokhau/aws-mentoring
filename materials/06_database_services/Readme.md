@@ -6,6 +6,13 @@
 - DynamoDB 
 - ElastiCache
 
+
+## Database Services on AWS
+
+![](images/aws-dbs.png)
+
+
+
 ## Amazon Relational Database Service (Amazon RDS)
 
 ![](images/aws-rds.jpg)
@@ -52,7 +59,7 @@ Example of CloudWatch alarm for RDS DB instance’s memory consumption:
 
 ![](images/aws-dynamodb-console.jpg)
 
-**Amazon DynamoDB** is a fully managed **NoSQL** database service that provides fast and predictable performance with seamless scalability. There's MongoDB compatibility.  
+**Amazon DynamoDB** is a fully managed **NoSQL** database service that provides fast and predictable performance with seamless scalability.
 
 In DynamoDB, tables, items, and attributes are the core components that you work with. A table is a collection of items, and each item is a collection of attributes.  
 
