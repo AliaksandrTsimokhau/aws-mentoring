@@ -5,6 +5,7 @@
 - Relational Database Service (RDS)
 - DynamoDB 
 - ElastiCache
+- Move to managed databases
 
 
 ## Database Services on AWS
@@ -131,3 +132,8 @@ All info regarding ElastiCache pricing can be found in [AWS docs](https://aws.am
 ### More details 
 
 - https://d0.awsstatic.com/whitepapers/performance-at-scale-with-amazon-elasticache.pdf  
+
+
+## Move to managed databases
+
+- https://aws.amazon.com/getting-started/hands-on/move-to-managed/?trk=gs_card
