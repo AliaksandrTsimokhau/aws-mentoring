@@ -53,6 +53,25 @@ To create AWS Account:
 
 1.2.6 Confirm and complete Registration with received code.
 
+
+>## ! NOTES
+>If you've not received an SMS message for several times on this step, сontact  AWS support.
+![](images/aws_registration_confirm_identity.png)
+
+1. Follow this link [Sign in](https://console.aws.amazon.com/console/home?nc2=h_ct&src=header-signin) and sign in to "Root", using login and password.
+
+2. Open AWS support center
+
+![](images/aws_support_link.png)
+
+
+3. Create new case and describe your issue. For "Contact options" choose method "Chat"
+![](images/aws_registration_support_case.png)
+
+![](images/aws_registration_support_contact_option.png)
+
+
+
 ---
 ## 2. Signing in with Root user.
 
