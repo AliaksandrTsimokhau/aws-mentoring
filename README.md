@@ -1,27 +1,14 @@
 ![](https://dunhamconnect.com/wp-content/uploads/aws-migration-1200x675.jpg)
 
-# AWS Mentoring
 
-## Domains:
+# AWS DevOps Program
 
-- Automation and Optimization
-- Deployment and Provisioning
-- High Availability
-- Monitoring and Reporting
-- Networking
-- Security and Compliance
-- Storage and Data Management
 ## Table of Content
 
 #### 1. [AWS Cloud Overview](/materials/01_aws_cloud_overview/Readme.md):
-- AWS Fundamentals
-- Regions and Zones
-- Access and manage Amazon Web Services
-- Protecting your AWS account
-- Logging and Monitoring
-- Taking care of Billing in Cloud
-- [**Practice**](/materials/01_aws_cloud_overview/tasks/Readme.md)
-
+- [AWS Fundamentals](https://aws.amazon.com/getting-started/fundamentals-core-concepts/)
+- [AWS Cloud Practitioner Training](https://youtu.be/3hLmDS179YE)
+- [**Practice: Creating and configuring Free-tier AWS Account**](/materials/01_aws_cloud_overview/tasks/Readme.md)
 
 #### 2. [Networking, DNS and Content Delivery](/materials/02_networking_dns_and_content_delivery/Readme.md)
 - VPC
@@ -101,3 +88,16 @@
 
 #### 12. AWS Certification Pathways
 - https://aws.amazon.com/training/?id=docs_gateway
+
+#### 13. [Final Task](/materials/13_Final_Task/Readme.md)
+
+
+## Domains:
+
+- Automation and Optimization
+- Deployment and Provisioning
+- High Availability
+- Monitoring and Reporting
+- Networking
+- Security and Compliance
+- Storage and Data Management
