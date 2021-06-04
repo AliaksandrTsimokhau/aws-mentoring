@@ -21,7 +21,7 @@ API Gateway handles all the tasks involved in accepting and processing up to hun
 
 API Gateway creates RESTful APIs that: 
 
-- Are HTTP-based
+- Are HTTP-based, supports SSL
 - Enable stateless client-server communication
 - Implement standard HTTP methods such as `GET`, `POST`, `PUT`, `PATCH`, and `DELETE`
 
@@ -45,7 +45,7 @@ With API Gateway, you can launch new services faster and with reduced investment
 
 2) **Security**. API Gateway provides you with multiple tools to authorize access to your APIs and control service operation access. API Gateway allows you to leverage AWS administration and security tools, such as AWS Identity and Access Management (IAM) and Amazon Cognito, to authorize access to your APIs. API Gateway can verify signed API calls on your behalf using the same methodology AWS uses for its own APIs. Using custom authorizers written as AWS Lambda functions, API Gateway can also help you verify incoming bearer tokens, removing authorization concerns from your backend code. 
 
-3) **Resiliency**. API Gateway helps you manage traffic with throttling so that backend operations can withstand traffic spikes. API Gateway also helps you improve the performance of your APIs and the latency your end users experience by caching the output of API calls to avoid calling your backend every time. 
+3) **Resiliency**. To prevent your APIs from being overwhelmed by too many requests, API Gateway throttles requests to your APIs. Specifically, API Gateway sets a limit on a steady-state rate and a burst of request submissions against all APIs in your account. You can configure custom throttling for your APIs. To learn more, see Throttle API requests for better throughput.
 
 4) **Operations Monitoring**. After an API is published and in use, API Gateway provides you with a metrics dashboard to monitor calls to your services. The API Gateway dashboard, through integration with Amazon CloudWatch, provides you with backend performance metrics covering API calls, latency data and error rates. You can enable detailed metrics for each method in your APIs and also receive error, access or debug logs in CloudWatch Logs. 
 
@@ -54,6 +54,8 @@ With API Gateway, you can launch new services faster and with reduced investment
 6) **Designed for Developers**. API Gateway allows you to quickly create APIs and assign static content for their responses to reduce cross-team development effort and time-to-market for your applications. Teams who depend on your APIs can begin development while you build your backend processes. 
 
 7) **Real-Time Two-Way Communication**. Build real-time two-way communication applications such as chat apps, streaming dashboards, and notifications without having to run or manage any servers. API Gateway maintains a persistent connection between connected users and enables message transfer between them. 
+
+8) **Route53 integration** You can create Route 53 alias record that routes traffic to the regional or Edge-optimized API endpoint.
 
 ### Limits:
 
@@ -69,6 +71,14 @@ The following quotas apply per account, per Region in Amazon API Gateway:
 
 All quotas for each type of API Gateways type can be found on [this page](https://docs.aws.amazon.com/apigateway/latest/developerguide/limits.html).
 
+### Pricing
+
+For HTTP APIs and REST APIs, you pay only for the API calls you receive and the amount of data transferred out. There are no data transfer out charges for Private APIs. However, AWS PrivateLink charges apply when using Private APIs in API Gateway. API Gateway also provides optional data caching charged at an hourly rate that varies based on the cache size you select. For WebSocket APIs, you only pay when your APIs are in use based on number of messages sent and received and connection minutes.
+
+The Amazon API Gateway free tier includes one million API calls received for REST APIs, one million API calls received for HTTP APIs, and one million messages and 750,000 connection minutes for WebSocket APIs per month for up to 12 months. If you exceed this number of calls per month, you will be charged the API Gateway usage rates.
+
+- https://aws.amazon.com/api-gateway/pricing/
+
 
 ## AWS Lambda
 
@@ -78,8 +88,11 @@ All quotas for each type of API Gateways type can be found on [this page](https:
 
 Lambda runs your code on high-availability compute infrastructure and performs all the administration of the compute resources, including server and operating system maintenance, capacity provisioning and automatic scaling, code and security patch deployment, and code monitoring and logging. All you need to do is supply the code. 
 
-The code you run on AWS Lambda is called a “Lambda function.” After you create your Lambda function it is always ready to run as soon as it is triggered. Each function includes your code as well as some associated configuration information, including the function name and resource requirements. Lambda functions are “stateless,” with no affinity to the underlying infrastructure, so that Lambda can rapidly launch as many copies of the function as needed to scale to the rate of incoming events. 
+The code you run on AWS Lambda is called a “Lambda function.” After you create your Lambda function starts to wait for trigger requests. Each function includes your code as well as some associated configuration information, including the function name and resource requirements. Lambda functions are “stateless,” with no affinity to the underlying infrastructure, so that Lambda can rapidly launch as many copies of the function as needed to scale to the rate of incoming events. 
 
+AWS Lambda could be configured for execution in VPC. However, startup delays would be bigger.
+
+CPU allocation for Lambda could be adjusted by changing the amount of allocated memory to the function. If you increase memory for your function - then you would get better CPU power and vice versa.
 
 ![](images/aws-lambda-create.jpg)
 ![](images/aws-lambda-create-1.jpg)
@@ -95,21 +108,28 @@ You can use AWS Lambda to extend other AWS services with custom logic, or create
 After you upload your code to AWS Lambda, you can associate your function with specific AWS resources (e.g. a particular Amazon S3 bucket, Amazon DynamoDB table, Amazon Kinesis stream, or Amazon SNS notification). Then, when the resource changes, Lambda will execute your function and manage the compute resources as needed in order to keep up with incoming requests. 
 
 
+
 #### More Cases Explained:
 - https://www.simform.com/serverless-examples-aws-lambda-use-cases/
 
 ### Limits: 
 
+Maximum execution time for Lambda is 15 mins. 
+
 AWS Lambda is designed to run many instances of your functions in parallel. However, AWS Lambda has a default safety throttle for number of concurrent executions per account per region (visit here for info on default safety throttle limits). You can also control the maximum concurrent executions for individual AWS Lambda functions which you can use to reserve a subset of your account concurrency limit for critical functions, or cap traffic rates to downstream resources. 
 If you wish to submit a request to increase the throttle limit you can visit our Support Center, click "Open a new case," and file a service limit increase request. 
 
-The total unzipped size of the function and all Extensions cannot exceed the unzipped deployment package size limit of 250 MB.  
+The total unzipped size of the function and all Extensions cannot exceed the unzipped deployment package size limit of 250 MB. It is possible to use Lambda Layers to store runtime dependencies.  
 
  
 
 If resource or service limits are exceeded, AWS Lambda will try to execute the function three times. 
 
 ### Pricing:
+
+Lambda pricing has 2 dimensions: number of requests and total execution time in milliseconds. You are charged based on the number of requests for your functions and the duration, the time it takes for your code to execute. You're not charged when Lambda awaits for trigger request. Duration price depends on the amount of memory you allocate to your function.
+
+The AWS Lambda free usage tier includes 1M free requests per month and 400,000 GB-seconds of compute time per month.
 
 - https://aws.amazon.com/lambda/pricing/ 
 - https://calculator.aws/#/createCalculator/Lambda 
@@ -133,6 +153,8 @@ Amazon SQS supports both standard and FIFO queues:
 
 - Amazon SQS offers standard as the default queue type. Standard queues support a nearly unlimited number of API calls per second, per API action (SendMessage, ReceiveMessage, or DeleteMessage). Standard queues support at-least-once message delivery. However, occasionally (because of the highly distributed architecture that allows nearly unlimited throughput), more than one copy of a message might be delivered out of order. Standard queues provide best-effort ordering which ensures that messages are generally delivered in the same order as they're sent.
 - FIFO (First-In-First-Out) queues are designed to enhance messaging between applications when the order of operations and events is critical, or where duplicates can't be tolerated.
+- Maximum message size is 256kb
+
 
 ![](images/aws-sqs-create.jpg)
 
@@ -206,6 +228,11 @@ Determine whether you have given your consumer sufficient time to process messag
 
 -->
 
+### Pricing
+AWS SQS is priced by amount of messages per month. 
+
+Amazon SQS Free Tier includes 1 million Amazon SQS requests for free each month. Some applications might be able to operate within this Free Tier limit. 
+
 ### Useful Links: 
 
 - [What is Amazon Simple Queue Service](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/welcome.html)
@@ -236,8 +263,8 @@ Amazon SNS provides the following features and capabilities:
 
 ![](images/aws-sns-create-2.jpg)
 
-You can use the following services with Amazon SNS: 
-- Amazon SQS  
+Next AWS services has integration with Amazon SNS out of the box: 
+- Amazon SQS
 - AWS Lambda 
 - AWS Identity and Access Management (IAM) 
 - AWS CloudFormation[Text Wrapping Break] 
