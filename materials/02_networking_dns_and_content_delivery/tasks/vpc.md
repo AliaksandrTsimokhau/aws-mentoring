@@ -45,7 +45,7 @@ Requirements:
 
 Subnets:
 
-|   |  AZ-A |  AZ-B | AZ-C |
+|   |  Availability Zone-A |  Availability Zone-B | Availability Zone-C |
 | --- | :---: | :---: | :---: |
 | Public | `172.16.1.0/24` / `my-dev-01-sub-pub-a`  |  `172.16.3.0/24` / `my-dev-01-sub-pub-b` | `172.16.5.0/24` / `my-dev-01-sub-pub-c` |
 | Private | `172.16.2.0/24` / `my-dev-01-sub-priv-a` | `172.16.4.0/24` / `my-dev-01-sub-priv-b` |  `172.16.6.0/24` / `my-dev-01-sub-priv-c` |
@@ -120,14 +120,19 @@ Add new Route:
 Nat Gateway 1: 
 - Name: `my-dev-01-natgw-a`
 - Subnet: `my-dev-01-sub-pub-a`
+- Connectivity type: `Public`
 
 Nat Gateway 2: 
 - Name: `my-dev-01-natgw-b`
 - Subnet: `my-dev-01-sub-pub-b`
+- Connectivity type: `Public`
 
 Nat Gateway 3: 
 - Name: `my-dev-01-natgw-c`
 - Subnet: `my-dev-01-sub-pub-c`
+- Connectivity type: `Public`
+
+In each case click on button `Allocate Elastic IP` to get new Elastic IP for each Nat Gateway.
 
 2.5.2 Verify:
 
@@ -155,3 +160,7 @@ For `my-dev-01-sub-pub-c` subnet:
 - Route:
     - Destination: `0.0.0.0/0`
     - Target: (NAT Gateway) `my-dev-01-natgw-c`
+
+2.6.1 Verify:
+
+![](images/aws-vpc-route-tables-created.png)
