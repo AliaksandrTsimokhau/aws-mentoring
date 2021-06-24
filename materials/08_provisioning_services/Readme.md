@@ -5,6 +5,10 @@
 - Cloudformation
 - Systems Manager
 
+## Recommended Trainings:
+
+- [Learning AWS CloudFormation](https://learn.epam.com/detailsPage?id=eec8960e-cf89-469a-924d-7f473acc721e&source=EXTERNAL_COURSE)
+
 ## Cloudformation
 
 ![](images/changeset-diagram.png)

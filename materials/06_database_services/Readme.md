@@ -6,6 +6,11 @@
 - DynamoDB 
 - ElastiCache
 
+## Recommended Trainings:
+
+- [AWS Certified Solutions Architect - Associate (SAA-C02): 8 Databases](https://learn.epam.com/detailsPage?id=9ba80105-60eb-47b6-96dc-15f4bd6ac5e0&source=EXTERNAL_COURSE)
+- [AWS Administration: Tips and Tricks](https://learn.epam.com/detailsPage?id=59938d3d-c5dc-4206-a43f-c90b03babd94&source=EXTERNAL_COURSE)
+- [AWS: Storage and Data Management](https://learn.epam.com/detailsPage?id=b08af5ea-1be0-4d45-98d5-90491bbaa32f&source=EXTERNAL_COURSE)
 
 ## Database Services on AWS
 

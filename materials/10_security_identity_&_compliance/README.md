@@ -1,5 +1,9 @@
 # IAM – Identity and Access Management
 
+## Recommended Training:
+
+- [AWS Certified Solutions Architect - Associate (SAA-C02): 5 Identity and Access Management](https://learn.epam.com/detailsPage?id=711b13a6-3eba-4d0a-a87c-278c60661983&source=EXTERNAL_COURSE)
+
 ## Service Overview
 
 ---

@@ -7,6 +7,12 @@
 - [EC2 Auto Scaling](#ec2-auto-scaling)
 - [Load Balancing](#load-balancing)
 
+## Recommended Trainings:
+
+- [AWS Certified Solutions Architect - Associate (SAA-C02): 4 Compute Services](https://learn.epam.com/detailsPage?id=946db7fc-611d-4071-bd3c-818f1a58cf99&source=EXTERNAL_COURSE)
+- [AWS Certified Solutions Architect - Associate (SAA-C02): 6 Auto Scaling and Virtual Network Services](https://learn.epam.com/detailsPage?id=93b5715a-7725-4456-8034-a897287b5787&source=EXTERNAL_COURSE)
+- [AWS for Developers: ECS and Multi-Region Load Balancing](https://learn.epam.com/detailsPage?id=5ec54920-682b-42e5-9331-d6be99711d40&source=EXTERNAL_COURSE)
+
 ##  Elastic Compute Cloud - EC2
 
 ![](images/ec2-console.jpg)

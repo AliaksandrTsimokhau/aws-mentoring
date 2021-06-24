@@ -9,6 +9,11 @@
 - Simple Queue Service (SQS)
 - Simple Notification Service (SNS)
 
+## Recommended Trainings:
+
+- [Learning Amazon Web Services Lambda](https://learn.epam.com/detailsPage?id=bca62de9-8c4b-46cd-8ebd-adbb68273fd4&source=EXTERNAL_COURSE)
+- [AWS Certified Solutions Architect - Associate (SAA-C02): 7 Application Deployment](https://learn.epam.com/detailsPage?id=62c575ba-7546-4f10-85e9-e9593ec2b31a&source=EXTERNAL_COURSE)
+
 ## Amazon API Gateway
 
 ![](images/0_rR1grG94IwM1JGI8.jpeg)

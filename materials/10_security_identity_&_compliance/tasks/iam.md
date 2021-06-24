@@ -11,12 +11,14 @@ Pre-requisites:
 - Installed AWS cli v1 - https://docs.aws.amazon.com/cli/latest/userguide/install-cliv1.html
 - https://awspolicygen.s3.amazonaws.com/policygen.html or https://aws.amazon.com/blogs/security/use-the-new-visual-editor-to-create-and-modify-your-aws-iam-policies/ 
 
-Create role with AWS managed policy S3 full access
-Inline policy ssm:ReadOnly
-Customer managed policy kms:Decrypt
-with condition for usage for the whole AWS account
-Hint: Use policy generator
-Assign this policy to new user, add him permission for programmatic api access
+Create the following roles with:
+
+- AWS managed policy S3 full access
+- Inline policy `ssm:ReadOnly`
+- Customer managed policy `kms:Decrypt`
+
+Hint: Use policy generator  
+Assign this policy to new user, add permission for programmatic api access
 
 Add one more role with ability of assuming by user from previous step
 S3 read-only

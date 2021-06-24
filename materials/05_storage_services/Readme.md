@@ -9,6 +9,9 @@
 - Storage Gateway
 - AWS Backup
 
+## Recommended Training:
+
+- [AWS Certified Solutions Architect - Associate (SAA-C02): 2 Storage Design](https://learn.epam.com/detailsPage?id=2a69c48d-24e4-4f5d-b89c-e08d0d82ef5d&source=EXTERNAL_COURSE)
 
 ## AWS Storage Services
 
