@@ -113,6 +113,8 @@ Add new Route:
 
 2.5.1 Choose Nat Gateways
 
+Nat Gateways is not free and should be deleted after finishing the practice
+
 ![](images/aws-vpc-natgw.jpg)
 
 2.5.2 Create NAT gateway
