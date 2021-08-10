@@ -142,21 +142,21 @@ In each case click on button `Allocate Elastic IP` to get new Elastic IP for eac
 
 # 2.6 Create Route Tables for Private Subnets
 
-For `my-dev-01-sub-pub-a` subnet:
+For `my-dev-01-sub-priv-a` subnet:
 - Name: `my-dev-01-rt-a`
 - VPC: `my-dev-01`
 - Route:
     - Destination: `0.0.0.0/0`
     - Target: (NAT Gateway) `my-dev-01-natgw-a`
 
-For `my-dev-01-sub-pub-b` subnet:
+For `my-dev-01-sub-priv-b` subnet:
 - Name: `my-dev-01-rt-b`
 - VPC: `my-dev-01`
 - Route:
     - Destination: `0.0.0.0/0`
     - Target: (NAT Gateway) `my-dev-01-natgw-b`
 
-For `my-dev-01-sub-pub-c` subnet:
+For `my-dev-01-sub-priv-c` subnet:
 - Name: `my-dev-01-rt-c`
 - VPC: `my-dev-01`
 - Route:
@@ -166,3 +166,5 @@ For `my-dev-01-sub-pub-c` subnet:
 2.6.1 Verify:
 
 ![](images/aws-vpc-route-tables-created.png)
+
+2.7 Attach routing tables to appropriate subnets.
