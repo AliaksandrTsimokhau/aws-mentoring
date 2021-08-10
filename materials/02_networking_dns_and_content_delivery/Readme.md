@@ -230,10 +230,9 @@ agreements between them. Also, peering connections do not support transitive rou
 
 In this figure, VPC A has two peering connections with two different VPCs: VPC B and VPC C. Therefore, VPC A can communicate directly with VPCs B and C. Because peering connections do not support transitive routing, VPC A cannot be a transit point for traffic between VPCs B and C. In order for VPCs B and C to communicate with each other, a peering connection must be explicitly created between them.
 
-Here are the important points to understand about peering for the exam:
+Here are the important points to understand about peering:
 
 - You cannot create a peering connection between Amazon VPCs that have matching or overlapping CIDR blocks.
-- You cannot create a peering connection between Amazon VPCs in different regions.
 - Amazon VPC peering connections do not support transitive routing.
 - You cannot have more than one peering connection between the same two Amazon VPCs at the same time.
 
