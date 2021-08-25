@@ -5,30 +5,56 @@ Study how to create IAM roles/policies and use them for different AWS services, 
 
 ## Implementation Details
 
-Pre-requisites:
+### Pre-requisites:
 - Already created S3 bucket
 - Installed jq - https://stedolan.github.io/jq/download/ 
 - Installed AWS cli v1 - https://docs.aws.amazon.com/cli/latest/userguide/install-cliv1.html
 - https://awspolicygen.s3.amazonaws.com/policygen.html or https://aws.amazon.com/blogs/security/use-the-new-visual-editor-to-create-and-modify-your-aws-iam-policies/ 
 
-Create the following roles with:
+### User and Role
 
-- AWS managed policy S3 full access
-- Inline policy `ssm:ReadOnly`
-- Customer managed policy `kms:Decrypt`
+ - Create a new user. 
+ - Attach to the new user AWS managed policy: **S3 full access**. 
+ - Attach to the new user an inline policy, that should contain the follow “Actions”:
+    - **ssm:ReadOnly** 
+    - **kms:Decrypt** 
+    - **iam:ListRoles** 
+    - **sts:AssumeRole** 
 
-Hint: Use policy generator  
-Assign this policy to new user, add permission for programmatic api access
+_It’s highly recommended to read about the last two “Actions” in the Tutorials and guides._ 
+- Attach to the new user the Customer managed policy named “KmsDecryptPolicy”, that policy should contain “Action”: **kms:Decrypt**
 
-Add one more role with ability of assuming by user from previous step
-S3 read-only
+_Hint: Use policy generator_
 
-Verification:
-1. credentials retrieval from cli for user
-2. write file to existing s3 bucket to test full access
-3. perform role assuming using cli
-4. make a try to write file from step 2
-5. copy file from s3 using cli
+- After attaching all of that policies to the new user, add him permission for programmatic api access 
+- Add Role named “S3ReadOnlyRole”, attach to the role AWS managed policy: **S3 read-only**
+
+- Create a json and assume role policy that defines the trust relationship of the IAM role: 
+
+```
+{
+    "Version": "2012-10-17",
+    "Statement": {
+        "Effect": "Allow",
+        "Principal": { "AWS": "arn:aws:iam::123456789012:user/new_created_user" },
+        "Action": "sts:AssumeRole"
+    }
+}
+```
+
+
+### Verification:
+
+1. credentials retrieval from AWS CLI for the newly created user 
+2. authorize in AWS CLI using credentials from the previous step 
+3. write file to an existing s3 bucket to test full access using AWS CLI 
+4. perform role assuming using command aws sts assume-role 
+5. authorize in AWS CLI using credentials from the previous step 
+6. make sure that you are authorized by using role 
+7. make a try to write file from step 2 
+8. copy file from s3, that was uploaded in step, using AWS CLI 
+
+ 
 
 
 ## Solution levels (could be done in a sequence):
