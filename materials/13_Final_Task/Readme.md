@@ -217,39 +217,29 @@ GHOST_PACKAGE="ghost-4.12.1.tgz"
 DB_URL=${db_url_tpl}
 DB_USER="gh_user"
 DB_NAME="gh_db"
-NODE_VERSION='14.17.5'
+
 REGION=$(/usr/bin/curl -s http://169.254.169.254/latest/meta-data/placement/availability-zone | sed 's/[a-z]$//')
 DB_PASSWORD=$(aws ssm get-parameter --name $SSM_DB_PASSWORD --query Parameter.Value --with-decryption --region $REGION --output text)
 EFS_ID=$(aws efs describe-file-systems --query 'FileSystems[?Name==`gh_data`].FileSystemId' --region $REGION --output text)
 
-### Download botocore
+### Install pre-reqs
 curl https://bootstrap.pypa.io/get-pip.py -o /tmp/get-pip.py
 sudo python3 /tmp/get-pip.py
 sudo /usr/local/bin/pip install botocore
+curl -sL https://rpm.nodesource.com/setup_14.x | sudo bash -
+sudo yum install -y nodejs
+sudo npm install pm2 -g
 
 ### EFS mount
 mkdir -p /var/lib/ghost/content
 yum -y install amazon-efs-utils
 mount -t efs -o tls $EFS_ID:/ /var/lib/ghost/content
 
-### Download nvm manager for node js
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
-chmod +x ~/.nvm/nvm.sh && ~/.nvm/nvm.sh
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-nvm install $NODE_VERSION
-
-### Download ghost app, configure and start
+### Configure and start ghost app
 mkdir ghost
 wget https://registry.npmjs.org/ghost/-/$GHOST_PACKAGE
 tar -xzvf $GHOST_PACKAGE -C ghost --strip-components=1
 rm $GHOST_PACKAGE && cd ghost
-
-sudo amazon-linux-extras install epel -y
-sudo yum install nodejs npm --enablerepo=epel -y
-npm install
-sudo npm install pm2 -g
 
 cat << EOF >> config.production.json
 {
@@ -273,12 +263,12 @@ cat << EOF >> config.production.json
 }
 EOF
 
-ls -la  /var/lib/ghost/content/
-
-cp -R -n /ghost/content/* /var/lib/ghost/content/
+rsync -axvr --ignore-existing /ghost/content/ /var/lib/ghost/content || true
 chmod 755 -R /var/lib/ghost
 
-(npm start --production &)
+npm install
+
+NODE_ENV=production pm2 start /ghost/index.js --name "ghost" -i max
 
 ```
 
