@@ -1,8 +1,8 @@
 # Content
 
   * [Problem to Be Solved](#problem)
-  * [Explanation of the Solution](#solution)
-  * [PRE-REQUISITES](#prereq)
+  * [Solution approach](#solution)
+  * [Pre-requirements](#prereq)
   * [1 - Create Network stack](#network)
   * [2 - Create security groups](#sg)
   * [3 - Create Database](#db)
@@ -15,6 +15,7 @@
   * [10 - Create Auto-scaling group](#asg)
   * [11 - Create ECS resources](#ecs)
   * [12 - Monitoring](#monitoring)
+  * [Definition of done](#dod)
 
 # Problem statement <a name="problem"></a>
 
@@ -71,7 +72,7 @@ You can do this task following the step-by-step instructions or you can provisio
 - All metrics should be arranged into CloudWatch Dashboard 
 
 
-# PRE-REQUISITES <a name="prereq"></a>
+# Pre-requirements <a name="prereq"></a>
 
 - Activated AWS account
 - All modules from CloudX AWS DevOps course completed
@@ -328,6 +329,16 @@ Create CloudWatch Dashboard to agregate your infrastructure metrics:
 - RDS DB connections
 - RDS CPU utilization
 - RDS storage read\write IOPS
+
+## Definition of done <a name="dod"></a>
+
+Your soulition should be implemented according to requirements in [Solution approach](#solution). You should provide the output of the following script as the proof of working solution:
+```
+REGION={aws_region}
+LB={arn_of_your_alb}
+for i in  $(aws elbv2 describe-target-groups --load-balancer-arn $LB  --region $REGION | jq -r '.TargetGroups[].TargetGroupArn'); do aws elbv2 describe-target-health --target-group-arn $i --region $REGION; done
+```
+
 
 ## Clean-up
 
