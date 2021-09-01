@@ -177,6 +177,9 @@ Create IAM Role and asosiated IAM Role profile (name=ghost_app) with the followi
 "ssm:GetParameters",
 "secretsmanager:GetSecretValue",
 "kms:Decrypt"
+"elasticfilesystem:DescribeFileSystems",
+"elasticfilesystem:ClientMount",
+"elasticfilesystem:ClientWrite"
 ```
 This IAM role provides EC2 and Fargate instances with access to the services. For test purposes it acceptable to allow "any" resource access. You would consider to restrict each service in policy with resource arn(using separate statement for each service) in the real environments.
 
