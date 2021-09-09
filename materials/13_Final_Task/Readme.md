@@ -174,7 +174,7 @@ Create IAM Role and asosiated IAM Role profile (name=ghost_app) with the followi
 "ecr:BatchGetImage",
 "logs:CreateLogStream",
 "logs:PutLogEvents",
-"ssm:GetParameter",
+"ssm:GetParameter*",
 "secretsmanager:GetSecretValue",
 "kms:Decrypt"
 "elasticfilesystem:DescribeFileSystems",
