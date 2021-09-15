@@ -297,10 +297,10 @@ To check script you can run single EC2 instance using Launch Template. Don't for
 
 ## 11 - Create ECS resources <a name="ecs"></a>
 
-* Warning: There are no free-tier for Fargate. For matter of learn you can run it for minutes to get logs and metrics. *
+* **Warning: There are no free-tier for Fargate.** For matter of learn you can run it for minutes to get logs and metrics. *
 
 1) Create Cluster (name=ghost)
-2) Create ECR repository
+2) Create **private** ECR repository.
 3) Clone ghost image from Docker hub to ECR repository.
 4) Author ECS Task definition:
   - Type: Fargate
