@@ -297,12 +297,14 @@ To check script you can run single EC2 instance using Launch Template. Don't for
 
 ## 11 - Create ECS resources <a name="ecs"></a>
 
-* **Warning: There are no free-tier for Fargate.** For matter of learn you can run it for minutes to get logs and metrics. *
+* **Warning: There are no free-tier for Fargate.** For matter of learn you can run it as long as you need (to get logs and metrics). *
+* **Warning: There are no free-tier for VPC Endpoints.** For matter of learn you can run it as long as you need (to get logs and metrics). *
 
 1) Create Cluster (name=ghost)
 2) Create **private** ECR repository.
 3) Clone ghost image from Docker hub to ECR repository.
-4) Author ECS Task definition:
+4) Fargate tasks will have no Public IP and cannot access AWS services via Internet. Therefore you have to configure VPC Endpoints for the following services: SSM, ECR, EFS, S3, CloudWatch and CloudWatch logs services. You have to assign all interface type VPC endpoints with {vpc_endpoint} security group. Gateway type VPC endpoint should be assigned with private network routing table:{private_rt}.
+5) Author ECS Task definition:
   - Type: Fargate
   - Image: Ghost image path in ECR
   - CPU limits: 256
@@ -312,10 +314,8 @@ To check script you can run single EC2 instance using Launch Template. Don't for
   - Define DB related parameters as variables. DB related variables you can get from [this example ](https://github.com/docker-library/docs/blob/master/ghost/stack.yml)
   - Atach IAM role {ghost_app} as execution iam role
 
-5) Create ECS Service attach it to ALB target group {ghost-fargate}. Configure service to run in private subnets and assign it with {fargate_pool} security group.
+6) Create ECS Service attach it to ALB target group {ghost-fargate}. Configure service to run in private subnets and assign it with {fargate_pool} security group.
  * DO NOT assign Public IP in a network configuration! *
-
-6) As Fargate tasks cannot access AWS services via Internet you have to configure VPC Endpoints for SSM, ECR, EFS, S3, CloudWatch and CloudWatch logs services. You have to assign all interface type VPC endpoints with {vpc_endpoint} security group. Gateway type VPC endpoint should be assigned with private network routing table:{private_rt}.
 
 You can refer to the [container documentation on Docker hub](https://github.com/docker-library/docs/tree/master/ghost)
 
