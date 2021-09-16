@@ -283,7 +283,9 @@ You can refer to the [application documentation](https://ghost.org/docs/config/)
 Сreate Launch Templpate: 
  - (name=ghost,instance_type=t2.micro, security_group={ec2_pool.id}, key_name={ghost-ec2-pool}, userdata={your_startup_script}, iam_role_profile={ghost_app})
 
-To check script you can run single EC2 instance using Launch Template. Don't forget to remove it after testing.
+To check script you can run single EC2 instance using Launch Template. Don't forget to remove it after testing. 
+**Hint**: you can use cloud-init log to examine userData scipt output(/var/log/cloud-init-output.log)
+**Hint**: you can use `pm2 logs|staus` commands to troublshout ghost application.
 
 
 ## 10 - Create Auto-scaling group <a name="asg"></a>
