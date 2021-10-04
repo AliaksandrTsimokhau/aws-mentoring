@@ -144,21 +144,21 @@ In each case click on button `Allocate Elastic IP` to get new Elastic IP for eac
 
 For `my-dev-01-sub-priv-a` subnet:
 - Name: `my-dev-01-rt-a`
-- VPC: `my-dev-01`
+- VPC: `my-vpc-01`
 - Route:
     - Destination: `0.0.0.0/0`
     - Target: (NAT Gateway) `my-dev-01-natgw-a`
 
 For `my-dev-01-sub-priv-b` subnet:
 - Name: `my-dev-01-rt-b`
-- VPC: `my-dev-01`
+- VPC: `my-vpc-01`
 - Route:
     - Destination: `0.0.0.0/0`
     - Target: (NAT Gateway) `my-dev-01-natgw-b`
 
 For `my-dev-01-sub-priv-c` subnet:
 - Name: `my-dev-01-rt-c`
-- VPC: `my-dev-01`
+- VPC: `my-vpc-01`
 - Route:
     - Destination: `0.0.0.0/0`
     - Target: (NAT Gateway) `my-dev-01-natgw-c`
