@@ -41,9 +41,9 @@ Requirements:
 
 Requirements:
 - Volume Type `Root`, Size (GiB): `20GB`, General Purpose SSD (gp2)
-- Volume Type `EBS`, Size (GiB): `40GB`, General Purpose SSD (gp2)
+- Volume Type `EBS`, Size (GiB): `30GB`, General Purpose SSD (gp2)
 
-![](images/aws-ec2-create-disk.jpg)
+![](images/aws-ec2-create-disk.png)
 
 #### Add Tags
 
