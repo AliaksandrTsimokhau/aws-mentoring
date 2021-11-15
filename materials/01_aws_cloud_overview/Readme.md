@@ -5,6 +5,20 @@ Resources like NAT Gateway, Route53 zone etc., will cost you some money (but not
 To avoid extra money expenditures, you can [set up a billing alert](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/monitor_estimated_charges_with_cloudwatch.html) that will notify you immediately after you have reached some threshold in your billing.
 And of course, do not forget cleaning up all the unnecessary resources after completing the lab.
 
+
+# Module goals
+
+- Know about AWS Fundamentals Course  
+
+- Be familiar with The Five Pillars of AWS 
+
+- Understand Shared Responsibility Model  
+
+- Get brief familiarity with AWS provided services and domains 
+
+- Budget alerts 
+
+
 # AWS Cloud Overview
 
    **Amazon Web Services (AWS)** is the world’s most comprehensive and broadly adopted cloud platform, offering over 200 fully featured services from data centers globally.
