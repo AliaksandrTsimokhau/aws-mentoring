@@ -2,6 +2,7 @@
 
 ## Table of Content
 
+- [Module goals](#module-goals)
 - Relational Database Service (RDS)
 - DynamoDB 
 - ElastiCache
@@ -12,6 +13,30 @@
 - [AWS Certified Solutions Architect - Associate (SAA-C02): 8 Databases](https://learn.epam.com/detailsPage?id=9ba80105-60eb-47b6-96dc-15f4bd6ac5e0&source=EXTERNAL_COURSE)
 - [AWS Administration: Tips and Tricks](https://learn.epam.com/detailsPage?id=59938d3d-c5dc-4206-a43f-c90b03babd94&source=EXTERNAL_COURSE)
 - [AWS: Storage and Data Management](https://learn.epam.com/detailsPage?id=b08af5ea-1be0-4d45-98d5-90491bbaa32f&source=EXTERNAL_COURSE)
+
+
+## Module goals
+
+- Differentiate database types: Relational, NoSQL and In-Memory 
+
+- Be able to explain what AWS RDS is, what features it provides and how to monitor RDS instances 
+
+- Explain what DynamoDB is for and what elements it has 
+
+- Know about eventually consistent/strongly consistent reads and Read/Write capacity mode in DynamoDB 
+
+- Understand DAX in DynamoDB 
+
+- ElastiCache: Redis vs MemCached 
+
+- EC Redis: Know shards, nodes/EC MemCached: Know clusters, nodes 
+
+- Replication Options / Sharding. Active-passive and Active-Active replication. 
+
+- Backing up Database Services 
+
+- Know how to monitor Database Services 
+
 
 ## Database Services on AWS
 
