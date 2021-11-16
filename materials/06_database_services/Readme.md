@@ -3,10 +3,10 @@
 ## Table of Content
 
 - [Module goals](#module-goals)
-- Relational Database Service (RDS)
-- DynamoDB 
-- ElastiCache
-- Move to managed databases
+- [Relational Database Service (RDS)](#amazon-relational-database-service-rds-amazon-rds)
+- [DynamoDB](#amazon-dynamodb) 
+- [ElastiCache](#amazon-elasticache)
+- [Move to managed databases](#move-to-managed-databases)
 
 ## Recommended Trainings:
 
