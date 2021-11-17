@@ -3,9 +3,12 @@
 
 ## Table of Content:
 
-- [Elastic Compute Cloud - EC2](#ec2)
+- [Elastic Compute Cloud - EC2](#elastic-compute-cloud-ec2)
+- [Monitoring EC2](#ec2-monitoring)
 - [EC2 Auto Scaling](#ec2-auto-scaling)
 - [Load Balancing](#load-balancing)
+- [Monitoring ELB](#elb-monitoring)
+
 
 ## Recommended Trainings:
 
