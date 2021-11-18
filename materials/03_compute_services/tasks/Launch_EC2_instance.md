@@ -22,24 +22,37 @@ Pre-requirements:
 Launch instance:
 
 1. From the console dashboard, navigate to EC2 Service and choose **Launch Instance**  
+
 ![](../images/Launch_Instance.png)
+
 2. Choose an **Amazon Machine Image**(AMI) with the following name "Amazon Linux 2 AMI"
+
 ![](../images/AMI.png)
+
 3. Choose an **Instance Type** and select t2.micro
+
 ![](../images/t2_micro.png)
+
 4. **Instance Details**, **Storage**, **Tags** leave by default
 5. Choose a **Security Group** and select SG that you created on Pre-requirements stage
+
 ![](../images/SG.png)
-6. On the Review Instance Launch page, choose **Launch**.
+
+6. On the Review Instance Launch page, choose **Launch**
 7. When prompted for a key pair, select **Choose an existing key pair**, then select your key pair that you created on Pre-requirements stage
+
 ![](../images/key_pair.png)
-8. Locate your instance in **Instances** navigation pane.
+
+8. Locate your instance in **Instances** navigation pane
+
 ![](../images/instance.png)
 
 Connect to the instance
 
 1. From bash console type `ssh -i your_ssh_key ec2-user@ec2_instance_public_name`
+
 ![](../images/ssh_access.png)
+
 2. Observe instance root directory with `ls` command
 3. Type `exit` to disconnect from the instance
 
@@ -49,4 +62,4 @@ This simple task shows you how to launch standalone EC2 instance with defined sh
 
 ## Tearing down
 
-Terminate instance(see the explanation above), security group and ssh-key.S
+Terminate instance(see the explanation above), security group and ssh-key.

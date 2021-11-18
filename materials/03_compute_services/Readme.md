@@ -41,7 +41,7 @@ Amazon EC2 provides the following features:
 
 
 ### EC2 News:
-- https://aws.amazon.com/ec2/?ec2-whats-new.sort-by=item.additionalFields.postDateTime&ec2-whats-new.sort-order=desc
+- [EC2 News](https://aws.amazon.com/ec2/?ec2-whats-new.sort-by=item.additionalFields.postDateTime&ec2-whats-new.sort-order=desc)
 
 ### Cautions
 
