@@ -18,10 +18,14 @@ Requirements:
 - Amazon Linux 2 AMI (HVM), SSD Volume Type 
 - Architecture: `64-bit (x86)`
 
+![](images/aws-ec2-AMI.png)
+
 #### Choose Instance Type
 
 Requirements:
 - Instance Type: `t2.micro`
+
+![](images/aws-ec2-instance-type.png)
 
 #### Configure Instance Details
 
@@ -36,6 +40,8 @@ Requirements:
     #!/bin/bash
     yum install -y tree
     ```
+![](images/aws-ec2-conf-details.png)
+![](images/aws-ec2-conf-details1.png)
 
 #### Add Storage
 
@@ -113,6 +119,6 @@ Host private
   ProxyCommand ssh -W %h:%p bastion
   IdentityFile {path/to/ssh_key_file}
 ```
-In this ssh_config file we use `ProxyCommand` to connect to private host through bastion.
+In this ~/.ssh/config file we use `ProxyCommand` to connect to private host through bastion.
 
 ![](images/ssh-ec2-1-2.jpg)
