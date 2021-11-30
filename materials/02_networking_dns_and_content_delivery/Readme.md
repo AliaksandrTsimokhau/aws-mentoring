@@ -3,6 +3,7 @@
 
 ## Table of Content:
 
+- [Your goals](#your-goals)
 - [VPC Service Overview](#vpc-overview)
 - [VPC Setup](#amazon-virtual-private-cloud-amazon-vpc)
 - [Elastic Network Interfaces](elastic-network-interfaces-enis)
@@ -25,6 +26,19 @@
 - [AWS: Networking](https://learn.epam.com/detailsPage?id=2699c11b-d1c8-455a-bf5e-1af537ba363c&source=EXTERNAL_COURSE)
 - [AWS Certified Solutions Architect - Associate (SAA-C02): 3 Virtual Private Cloud](https://learn.epam.com/detailsPage?id=b29ebc21-f056-4436-a748-8b7ce12efbd1&source=EXTERNAL_COURSE)
 - [AWS Certified Solutions Architect - Associate (SAA-C02): 6 Auto Scaling and Virtual Network Services](https://learn.epam.com/detailsPage?id=93b5715a-7725-4456-8034-a897287b5787&source=EXTERNAL_COURSE)
+
+
+
+## Your Goals:
+
+- To get familiar with AWS Network Architecture: VPC, Subnets, Private-Public subnets layout, Nat Gateways, Routing Tables, Elastic Network Interfaces (ENI) 
+- Explain the difference between Default VPC / Custom VPC, Public / Private Subnets, their usage pros and cons 
+- To know how to establish Cross VPC connectivity: VPC Peering, Transit Gateway 
+- To know how to secure your Networks (NACL and Security Groups, the difference between them) 
+- To get familiar with AWS DNS Service(AmazonProvidedDNS), DHCPs Option Sets 
+- Understand Route53: Public / Private Zones, Types of Records (including CNAME and Aliases) 
+- Learn about Content Delivery Network Service 
+
 ## VPC Overview 
 
 ![](https://blog.gelin.ru/2018/06/01%20VPC,%20subnets.png)
