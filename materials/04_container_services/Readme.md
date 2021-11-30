@@ -1,9 +1,26 @@
 # AWS Container Services
 
 ## Table of Content
-- ECR
-- ECS
-- EKS
+- [Your goals](#module-goals)
+- [ECR](#elastic-container-registry-ecr)
+- [ECS](#elastic-container-service-ecs)
+- [EKS](#amazon-elastic-kubernetes-service-eks)
+
+## Your Goals:
+
+On a high level:
+
+- Be able to name and briefly explain all AWS services to run Docker Containers
+- Be able to explain how AWS charges Container services
+- Understand lifecycle policies, image replication, image scanning and tag mutability 
+- Be able to explain ECS Clusters, Services, Tasks. Deployment and Distribution strategies. 
+- Understand AWS Elastic Kubernetes Service architecture 
+
+In details:
+
+- How to create/configure Docker Private Registry
+- How to login, pull/push images. 
+- Differentiate EC2 and Fargate container engines for ECS
 
 ## Elastic Container Registry (ECR)
 
