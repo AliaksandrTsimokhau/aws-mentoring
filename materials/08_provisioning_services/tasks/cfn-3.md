@@ -1,34 +1,22 @@
-# Domain: Automation and Optimization 
+# Domain: Provisioning services
 
-## Topic: Cloudformation. Advanced tasks
+## Topic: Advanced Cloudformation
 
-Useful links for the tasks implementation:
-1) [What is VPC](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html)
-2) [Security groups](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html)
-3) [S3 buckets](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html#BasicsBucket)
-4) [EC2 instance profiles](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-roles-for-amazon-ec2.html)
-5) [EIP](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-eips.html)
-6) [EBS Volume types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-volume-types.html)
-7) [User data](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html)
-8) [Autoscaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/what-is-amazon-ec2-auto-scaling.html)
-9) [Launch templates](https://docs.aws.amazon.com/autoscaling/ec2/userguide/LaunchTemplates.html)
-10) [Application load balancer](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/introduction.html)
-11) [Target group](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-target-groups.html)
-
-Cloudformation template reference to above [resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html)  
-Cloudformation [changesets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-changesets.html)
-
+Useful links:
+- Cloudformation [template reference](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html)
+- Cloudformation [changesets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-changesets.html)
 
 ### Task: Create the infrastructure stack that imitates highly available web site, with additional security items, using Cloudformation
 
-It is recommended to create the stack step by step, adding new items using Cloudformation Changesets, starting from step 2
+NOTE: The task has to be implemented step by step, in order below. On the first step you'll need to create a template file from scratch with mentioned resources (see Step 1) and deploy them using Cloudformation AWS console. Starting from step 2, add new required items into the template file created on step 1, and apply it using Cloudformation Changesets using Cloudformation AWS console.
 
 ##### Step 1: Create VPC
 Stack items to create:
 - VPC with 10.20.0.0/16 mask
 - Internet Gateway attached to the VPC
 - S3 bucket
-Note: after the creation upload a simple file into bucket manually
+
+Note: after the creation manually upload a sample file into the created S3 bucket
 
 ##### Step 2: Extend VPC with subnets
 Stack items to add:
@@ -38,31 +26,36 @@ Stack items to add:
 
 ##### Step 3: Add NAT gateway and routing
 Stack items to add:
-- Elastic IP (EIP)
-- NAT Gateway attached to any of public subnets and associated with EIP
 - Route table for public subnets with traffic being sent to Internet gateway
+- Elastic IP (EIP)
+- NAT Gateway attached to any of public subnets and associated with the EIP
 - Route table for private subnets with traffic being sent to NAT gateway
 
-##### Step 4: Create ELB
+##### Step 4: Load balancing and autoscaling
 Stack items to add:
 - Application load balancer with 80 port listener and associated with 2 public subnets
 - Target group attached to the Application load balancer
-- EC2 instance profile with access to S3 bucket
-- Launch template with Ubuntu image and httpd installed
+- EC2 instance profile with access to the S3 bucket
+- Launch template with Ubuntu image (get the latest LTS from AWS Marketplace) and httpd installed
 - Launch template should have EC2 instance profile attached to it
 - Autoscaling group with Launch template attached. Minimum running instances - 2
 
-##### Step 5: Create output from stack. Tagging
+*These links might be helpful:*
+1) [EC2 instance profiles](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-roles-for-amazon-ec2.html)
+2) [User data](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html)
+3) [Launch templates](https://docs.aws.amazon.com/autoscaling/ec2/userguide/LaunchTemplates.html)
+
+##### Step 5: Get output from stack. Tagging resources
 Stack items to add:
 - Export ELB address in Output section
-- Tag each possible item with tags: 
-   1) "Name" (like "lab08-3-...")
-   2) "Project" and value "Cloudformation"
-   3) "Role" and values like ("Security", "AppTier", "LB" etc)
+- Tag each possible item with: 
+   1) Key: "Name", Value: "lab08-3-<your_name>"
+   2) Key: "Project", Value "Cloudformation"
+   3) Key: "Role", Values like ("Security", "WebApplication", "LB", etc.)
 
 ##### Step 6: Check if everything works
-- Open site by address from Output section
-- SSH to any instance and try to obtain file from S3
+- Open site by the address obtained from the output section on step 5
+- SSH to any instance and try to get file uploaded on step 1 from S3
 
 
 ### Task: Disassemble the stack
