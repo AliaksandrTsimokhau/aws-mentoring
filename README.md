@@ -12,9 +12,10 @@
 
 #### 2. [Networking, DNS and Content Delivery](/materials/02_networking_dns_and_content_delivery/Readme.md)
 - VPC
+- VPC Security
+- NAT Instances and NAT Gateways
+- VPC Peering
 - VPC Flow Logs
-- Route53
-- CloudFront
 - [**Practice**](/materials/02_networking_dns_and_content_delivery/tasks/Readme.md)
 
 

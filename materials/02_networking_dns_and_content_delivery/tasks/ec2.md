@@ -18,16 +18,20 @@ Requirements:
 - Amazon Linux 2 AMI (HVM), SSD Volume Type 
 - Architecture: `64-bit (x86)`
 
+![](images/aws-ec2-AMI.png)
+
 #### Choose Instance Type
 
 Requirements:
 - Instance Type: `t2.micro`
 
+![](images/aws-ec2-instance-type.png)
+
 #### Configure Instance Details
 
 Requirements:
 - Number of instances: `1`
-- Network: `my-vps-01`
+- Network: `my-vpc-01`
 - Subnet: `my-dev-01-sub-pub-c`
 - Auto-assign Public IP: use default settings
 - Shutdown behavior: `Terminate`
@@ -36,12 +40,14 @@ Requirements:
     #!/bin/bash
     yum install -y tree
     ```
+![](images/aws-ec2-conf-details.png)
+![](images/aws-ec2-conf-details1.png)
 
 #### Add Storage
 
 Requirements:
-- Volume Type `Root`, Size (GiB): `20GB`, General Purpose SSD (gp2)
-- Volume Type `EBS`, Size (GiB): `30GB`, General Purpose SSD (gp2)
+- Volume Type `Root`, Size (GiB): `8GB`, General Purpose SSD (gp2), Delete on Termination: Checked
+- Volume Type `EBS`, Size (GiB): `10GB`, General Purpose SSD (gp2), Delete on Termination: Checked
 
 ![](images/aws-ec2-create-disk.png)
 
@@ -94,23 +100,25 @@ Requirements:
 - Subnet: `my-dev-01-priv-b`
 - Shutdown behavior: `Terminate`
 - Name tag: `private-host`
+- SSH Key: `created in the previous step`
 
 ### Connect to the host in Private Network:
 
-Create ssh config file (`~/.ssh/config`):
+Create ssh config file on the host machine(`~/.ssh/config`):
 ```
 Host bastion
   User ec2-user
-  HostName {public_ip}
-  IdentityFile {ssh_key_file}
+  HostName {bastion_public_ip}
+  IdentityFile {path/to/ssh_key_file}
   ForwardAgent yes
 
 Host private
   User ec2-user
-  HostName {private_ip}
+  HostName {second_instance_private_ip}
   ForwardAgent yes
   ProxyCommand ssh -W %h:%p bastion
-  IdentityFile {ssh_key_file}
+  IdentityFile {path/to/ssh_key_file}
 ```
+In this ~/.ssh/config file we use `ProxyCommand` to connect to private host through bastion.
 
 ![](images/ssh-ec2-1-2.jpg)
