@@ -7,6 +7,8 @@
 - [Elastic Compute Cloud - EC2](#ec2)
 - [EC2 Auto Scaling](#ec2-auto-scaling)
 - [Load Balancing](#load-balancing)
+- [Monitoring ELB](#elb-monitoring)
+
 
 ## Recommended Trainings:
 
@@ -48,7 +50,7 @@ In details:
 
 Amazon EC2 provides the following features:
 - Virtual computing environments, known as instances
-- Preconfigured templates for your instances, known as Amazon Machine Images (AMIs), that package the bits you need for your server (including the operating system and additional software)
+- Preconfigured templates for your instances, known as Amazon Machine Images (AMIs), that package the fits you need for your server (including the operating system and additional software)
 - Various configurations of CPU, memory, storage, and networking capacity for your instances, known as instance types
 - Secure login information for your instances using key pairs(AWS stores the public key, and you store the private key in a secure place) 
 - Storage volumes for temporary data that's deleted when you stop, hibernate, or terminate your instance, known as instance store volumes
@@ -61,7 +63,7 @@ Amazon EC2 provides the following features:
 
 
 ### EC2 News:
-- https://aws.amazon.com/ec2/?ec2-whats-new.sort-by=item.additionalFields.postDateTime&ec2-whats-new.sort-order=desc
+- [EC2 News](https://aws.amazon.com/ec2/?ec2-whats-new.sort-by=item.additionalFields.postDateTime&ec2-whats-new.sort-order=desc)
 
 ### Cautions
 
@@ -69,7 +71,8 @@ Amazon EC2 provides different resources that you can use. These resources includ
 
 One of the most important is the limit on the number of running On-Demand Instances per AWS account per Region. On-Demand Instance limits are managed in terms of the number of virtual central processing units (vCPUs, regardless of the instance type). 
 
-Please refer to the documentation:
+Please refer to the documentation: [Request a limit increase](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-on-demand-instances.html#vcpu-limits-request-increase)
+
 
 EC2 usage are billed on one second increments, with a minimum of 60 seconds. Similarly, provisioned storage for EBS volumes will be billed per-second increments, with a 60 second minimum. Per-second billing is available for instances launched in:
 - On-Demand, Reserved and Spot forms
@@ -98,7 +101,7 @@ You could collect following EC2 metrics:
 
 #### More details:
 
-- https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/viewing_metrics_with_cloudwatch.html#ec2-cloudwatch-metrics 
+- [EC2 CloudWatch Metrics](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/viewing_metrics_with_cloudwatch.html#ec2-cloudwatch-metrics)
 - [EC2 Monitoring Overview (Video)](https://www.youtube.com/watch?v=Z0agxlUrwxI)
 - [EC2 Monitoring using CloudWatch Agent (Video)](https://www.youtube.com/watch?v=vAnIhIwE5hY)
 - [EC2 Monitoring](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/monitoring_ec2.html)
@@ -106,7 +109,7 @@ You could collect following EC2 metrics:
 
 You can use the following dimensions to refine the metrics listed in the previous list: 
 
-https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/viewing_metrics_with_cloudwatch.html#ec2-cloudwatch-dimensions 
+- [EC2 CloudWatch Dimensions](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/viewing_metrics_with_cloudwatch.html#ec2-cloudwatch-dimensions) 
 
 
 ## EC2 Auto Scaling

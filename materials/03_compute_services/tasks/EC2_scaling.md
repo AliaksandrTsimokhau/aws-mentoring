@@ -14,71 +14,113 @@ You are a System Engineer witch has to administrate online supermarket. Next mon
 ### Explanation of the Solution  
 
 Reference documentation:
-- https://docs.aws.amazon.com/autoscaling/ec2/userguide/what-is-amazon-ec2-auto-scaling.html 
-- https://docs.aws.amazon.com/autoscaling/ec2/userguide/AutoScalingGroup.html 
-- https://docs.aws.amazon.com/autoscaling/ec2/userguide/GettingStartedTutorial.html 
-- http://en.clouddesignpattern.org/index.php/CDP:Scale_Out_Pattern  
-- https://docs.microsoft.com/en-us/azure/architecture/example-scenario/apps/hpc-saas  
+- [What is Amazon EC2 Auto Scaling?](https://docs.aws.amazon.com/autoscaling/ec2/userguide/what-is-amazon-ec2-auto-scaling.html)
+- [Auto Scaling groups](https://docs.aws.amazon.com/autoscaling/ec2/userguide/AutoScalingGroup.html)
+- [Getting started with Amazon EC2 Auto Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/GettingStartedTutorial.html)
  
 ### Implementation Details  
 
-_We’ll need cloud formation for almost each task_
-_OR we can reference VPC and SGs made in previous tasks_
+We can use VPC and SGs made in previous tasks. [Launching Instances in Public and Private Subnets](https://git.epam.com/siarhei_beliakou/aws-mentoring/-/blob/master/materials/02_networking_dns_and_content_delivery/tasks/ec2.md)
 
 **Required**: Key Pairs, VPC, Security Group 
 
 1. Create a Launch Template:
-    - Navigate to EC2 > Instances > Launch Templates. 
-    - Click Create launch template, call it "MyLaunchTemplate", and mark checkbox Auto Scaling guidance . 
-    - Select for "AMI" Amazon Linux 2 AMI (HVM) (64-bit x86) image.
-    - Set the instance type as t2.micro. 
-    - Select the key pair you created earlier or create new. 
-    - Network settings set VPC and "XXXXXname" security group. 
-    - Storage will be automatically set, don’t change it. 
-    - Expand Advanced Details, and paste in the User data provision script to install app. For example: "sudo yum –y install httpd" 
-    - Click Create Launch Template. 
+    - Navigate to EC2 > Instances > Launch Templates
+
+        ![](../images/Launch_template.png)
+
+    - Click "Create launch template", call it "MyLaunchTemplate", and mark checkbox Auto Scaling guidance
+
+        ![](../images/Create_launch_template.png)
+
+    - Select for "AMI" Amazon Linux 2 AMI (HVM) (64-bit x86) image
+
+        ![](../images/Create_launch_template_AMI.png) 
+
+    - Set the instance type as t2.micro 
+
+        ![](../images/Create_launch_template_Instance_type.png) 
+
+    - Select the key pair you created earlier or create new
+
+        ![](../images/Create_launch_template_key_pair.png) 
+
+    - Network settings set VPC and "XXXXXname" security group
+
+        ![](../images/Create_launch_template_Network_settings.png) 
+
+    - Storage will be automatically set, don’t change it
+    - Expand "Advanced Details", and paste in the "User data" provision script to install app. For example: "sudo yum –y install httpd"
+
+        ![](../images/Create_launch_template_User_data.png)
+
+    - Click "Create Launch Template" 
+
+        ![](../images/Create_launch_template_done.png)
 
 2. Create a Autoscaling group 
-    - Navigate to EC2  > Auto Scaling > Auto Scaling Groups. 
-    - Click Create an Auto Scaling group. 
+    - Navigate to EC2  > Auto Scaling > Auto Scaling Groups 
+
+        ![](../images/ASG.png)
+
+    - Click "Create an Auto Scaling group"
     - Name the group "MyASG"
-    - Select Launch Template, and choose the template you just created "MyLaunchTemplate"
-    - Select Adhere to Launch Template. 
-    - Version will set by "Default (1)", don’t change it. 
-    - Click "Next"
-    - Set Network VPC "YYYYYname", Subnets "ZZZZname". 
-    - Click "Next". 
-    - Load balance optional set to "No load balancer". 
-    - Health check don’t change. 
-    - Additional setting don’t change. 
-    - Click "Next". 
+    - Select "Launch Template", and choose the template you just created "MyLaunchTemplate"
+
+        ![](../images/ASG_Launch_template.png)
+
+    - Version will set by "Default (1)", don’t change it and click "Next"
+    - Set Network VPC "YYYYYname", Subnets "ZZZZname" and click "Next"
+
+        ![](../images/ASG_network.png)
+
+    - Load balance optional set to "No load balancer"
+    - Health check don’t change
+    - Additional setting don’t change and click "Next"
+
+        ![](../images/ASG_advanced_options.png)
+
     - In Group Size enter next  
         - Desired Capacity: 1 
         - Minimum Capacity: 1 
         - Maximum Capacity: 2 
-    - Scaling policies set to "Target tracking scaling policy", don’t change "Scaling policy name",  "Metric type" and "Target value". (moves to next module) 
-    - Click "Next". 
-    - Don’t change Notifications 
-    - Click "Next". 
-    - Click "Next". 
-    - Click "Create Auto Scaling group". 
+        
+        ![](../images/ASG_group_size.png)
+
+    - Scaling policies set to "Target tracking scaling policy", don’t change "Scaling policy name",  "Metric type" and "Target value" and click "Next"
+
+        ![](../images/ASG_Scaling_policies.png)
+
+    - Don’t change Notifications and click "Next"
+    - Don’t add Tags and click "Next"
+    - Check review and click "Create Auto Scaling group"
+
+        ![](../images/ASG_done.png)
  
-_Get rid from autoscaling and move it to another submodule_
+Get rid from autoscaling and move it to another submodule
 
 3. Test Horizontal Scaling 
-    - Connect to one of the EC2 instances via SSH. 
+    - Connect to one of the EC2 instances via SSH (you need to use bastion like you did in previous tasks [Launching Instances in Public and Private Subnets](https://git.epam.com/siarhei_beliakou/aws-mentoring/-/blob/master/materials/02_networking_dns_and_content_delivery/tasks/ec2.md#connect-to-the-host-in-private-network))
+
+        ![](../images/ASG_ssh.png)
+
     - Install stress test utility, run:
         ```
-        sudo amazon-linux-extras install epel -y. 
+        sudo amazon-linux-extras install epel -y
         sudo yum install -y stress 
         ```
     - Run stress test:
         ```
         stress --cpu 2 --timeout 300 
         ```
-    - Wait 5-10 minutes, go to EC2 > Auto Scaling groups > MyASG click "Monitoring" then "EC2" and see "CPU Utilization" graph. Then check on the page EC2  > Instance and check the number of Runnig Instance. 
+    - Wait 5-10 minutes, go to EC2 > Auto Scaling groups > MyASG click "Monitoring" then "EC2" and see "CPU Utilization" graph. Then check on the page EC2  > Instance and check the number of Runnig Instance. Also you can check "Activity History".
 
-  
+        ![](../images/ASG_CPU_Utilization.png)
+
+        ![](../images/ASG_instances.png)
+
+        ![](../images/ASG_activity_history.png)
+ 
 
 ## Benefits / Outcomes / Pros and Cons / Summary  
 
@@ -93,9 +135,9 @@ Link to cost calculator: https://aws.amazon.com/ec2/pricing/on-demand/?nc1=h_ls
 
 ## Tearing down  
 
-1. Delete Auto Scaling Ggroups 
+1. Delete Auto Scaling Groups:
     - Navigate to EC2  > Auto Scaling > Auto Scaling Groups. 
     - Mark "MyASG" group and click "Delete". On the next page type in the field "delete" and click "Delete". 
-2. Delete Launch Templates 
+2. Delete Launch Templates:
     - Navigate to EC2  > EC2 > Instances > Launch Templates. 
     - Mark "MyLaunchTemplate" click on "Action" and set  "Delete template". On the next page type in the field "delete" and click "Delete". 
