@@ -3,11 +3,12 @@
 
 ## Table of Content:
 
+- [Your goals](#your-goals)
 - [VPC Service Overview](#vpc-overview)
 - [VPC Setup](#amazon-virtual-private-cloud-amazon-vpc)
 - [Elastic Network Interfaces](elastic-network-interfaces-enis)
 - [Elastic IP Addresses](#elastic-ip-addresses-eips)
-- [VPC security](#vpc-security)
+- [VPC Security](#vpc-security)
 - [NAT Instances and NAT Gateways](#network-address-translation-nat-instances-and-nat-gateways)
 - [VPC Peering](#vpc-peering)
 - [VPC Flow Logs](#vpc-flow-logs)
@@ -25,6 +26,19 @@
 - [AWS: Networking](https://learn.epam.com/detailsPage?id=2699c11b-d1c8-455a-bf5e-1af537ba363c&source=EXTERNAL_COURSE)
 - [AWS Certified Solutions Architect - Associate (SAA-C02): 3 Virtual Private Cloud](https://learn.epam.com/detailsPage?id=b29ebc21-f056-4436-a748-8b7ce12efbd1&source=EXTERNAL_COURSE)
 - [AWS Certified Solutions Architect - Associate (SAA-C02): 6 Auto Scaling and Virtual Network Services](https://learn.epam.com/detailsPage?id=93b5715a-7725-4456-8034-a897287b5787&source=EXTERNAL_COURSE)
+
+
+
+## Your Goals:
+
+- To get familiar with AWS Network Architecture: VPC, Subnets, Private-Public subnets layout, Nat Gateways, Routing Tables, Elastic Network Interfaces (ENI) 
+- Explain the difference between Default VPC / Custom VPC, Public / Private Subnets, their usage pros and cons 
+- To know how to establish Cross VPC connectivity: VPC Peering, Transit Gateway 
+- To know how to secure your Networks (NACL and Security Groups, the difference between them) 
+- To get familiar with AWS DNS Service(AmazonProvidedDNS), DHCPs Option Sets 
+- Understand Route53: Public / Private Zones, Types of Records (including CNAME and Aliases) 
+- Learn about Content Delivery Network Service 
+
 ## VPC Overview 
 
 ![](https://blog.gelin.ru/2018/06/01%20VPC,%20subnets.png)
@@ -43,7 +57,7 @@ Amazon Virtual Private Cloud (Amazon VPC) lets you provision a logically isolate
 
 **VPC endpoint** — Enables you to privately connect your VPC to supported AWS services and VPC endpoint services powered by PrivateLink without requiring an internet gateway, NAT device, VPN connection, or AWS Direct Connect connection. Instances in your VPC do not require public IP addresses to communicate with resources in the service. Traffic between your VPC and the other service does not leave the Amazon network.  
 
-**CIDR block** — Classless Inter-Domain Routing. An internet protocol address allocation and route aggregation methodology. For more information, see Classless Inter-Domain Routing in Wikipedia. 
+**CIDR block** — Classless Inter-Domain Routing. An internet protocol address allocation and route aggregation methodology. For more information, see Classless Inter-Domain Routing in [Wikipedia](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing). 
 
 ### Use cases / Considerations
 
@@ -62,13 +76,13 @@ What can we do with a VPC?
 
 Monitoring tools/service: 
 - [VPC Flow logs](#vpc-flow-logs)
-- CloudWatch 
+- [CloudWatch](https://aws.amazon.com/ru/blogs/mt/monitor-network-throughput-of-interface-vpc-endpoints-using-amazon-cloudwatch/) 
 
 ## Cautions 
 
 You can create 5 VPCs per Region. The quota for internet gateways per Region is directly correlated to this one. Increasing this quota increases the quota on internet gateways per Region by the same amount. You can have 100s of VPCs per Region for your needs even though the default quota is 5 VPCs per Region.  
 
-You can request an increase for these quotas. For some of these quotas, you can view your current quota using the Limits page of the Amazon EC2 console. 
+You can request an increase for these quotas. For some of these quotas, you can view your current quota using the Limits page of the [Amazon EC2 console](https://console.aws.amazon.com/ec2/v2/home?#Limits:)). 
 
 ## Pricing considerations 
 
@@ -84,7 +98,7 @@ https://aws.amazon.com/vpc/pricing/
 
 # Amazon Virtual Private Cloud (Amazon VPC)
 
-Figure 2.1 illustrates an Amazon VPC with an address space of `10.0.0.0/16`, two subnets with different address ranges (`10.0.0.0/24` and `10.0.1.0/24`) placed in different Availability Zones, and a route table with the local route specified.
+Figure below illustrates an Amazon VPC with an address space of `10.0.0.0/16`, two subnets with different address ranges (`10.0.0.0/24` and `10.0.1.0/24`) placed in different Availability Zones, and a route table with the local route specified.
 
 ![](images/2.1.jpg)
 
@@ -104,22 +118,21 @@ An Amazon VPC has the following optional components:
 - Network Address Translation (NATs) instances and NAT gateways
 - Virtual Private Gateway (VPG), Customer Gateways (CGWs), and Virtual Private Networks (VPNs)
 
-Figure 2.2 illustrates an Amazon VPC with an address space of `10.0.0.0/16`, one subnet with
+Figure below illustrates an Amazon VPC with an address space of `10.0.0.0/16`, one subnet with
 an address range of `10.0.0.0/24`, a route table, an attached IGW (Internet Gateway), and a single Amazon EC2 instance with a private IP address and an EIP address. 
 
 The route table contains two routes: the local route that permits inter-VPC communication and a route that sends all non-local traffic to the IGW (igw-id). Note that the Amazon EC2 instance has a public IP address (EIP, 198.51.100.2); this instance can be accessed from the Internet, and traffic may originate and
 return to this instance.
 
-![](https://www.mynetworkdojo.com/wp-content/uploads/2019/08/AWS-VPC-2.png)
-![](https://qph.fs.quoracdn.net/main-qimg-c8adbe652188ddc88070dc9b4f0ae91e)
+![](images/2.2.jpg)
 
 ## More Complex Set up:
 
-![](images/quickstart-vpc-design-fullscreen.png)
+![](images/2.3.png)
 
 ## Elastic Network Interfaces (ENIs)
 
-![](https://miro.medium.com/max/1554/1*ElvuTT7o1uxO_KyCo9a-lA.png)
+![](images/2.4.png)
 
 An Elastic Network Interface (ENI) is a virtual network interface that you can attach to an instance in an Amazon VPC. ENIs are only available within an Amazon VPC, and they are associated with a subnet upon creation. They can have one public IP address and multiple private IP addresses. If there are multiple private IP addresses, one of them is primary. Assigning a second network interface to an instance via an ENI allows it to be dual-homed (have network presence in different subnets). An ENI created independently of a particular instance persists regardless of the lifetime of any instance to which it is attached; if an underlying instance fails, the IP address may be preserved by attaching the ENI to a replacement instance.
 
@@ -134,7 +147,7 @@ You can optionally associate an IPv6 CIDR block with your VPC and subnets, and a
 
 ## Elastic IP Addresses (EIPs)
 
-![](https://moomindani.files.wordpress.com/2014/05/eip_after_fo.png)
+![](images/2.5.png)
 
 AWS maintains a pool of public IP addresses in each region and makes them available for you to associate to resources within your Amazon VPCs. An Elastic IP Addresses (EIP) is a static, public IP address in the pool for the region that you can allocate to your account (pull from the pool) and release (return to the pool). EIPs allow you to maintain a set of IP addresses that remain fixed while the underlying infrastructure may change over time. Here are the important points to understand about EIPs:
 
@@ -156,11 +169,11 @@ Amazon Virtual Private Cloud provides features that you can use to increase and 
 
 The following diagram illustrates the layers of security provided by security groups and network ACLs. For example, traffic from an internet gateway is routed to the appropriate subnet using the routes in the routing table. The rules of the network ACL that is associated with the subnet control which traffic is allowed to the subnet. The rules of the security group that is associated with an instance control which traffic is allowed to the instance:
 
-![](images/2.4.jpg)
+![](images/2.6.jpg)
 
-### Difference between Security Group and ACL:
+### Difference between Security Group and NACL:
 
-| Security Group | ACL |
+| Security Group | NACL |
 |---|---|
 | Operates at the instance level (first layer of defense) | Operates at the subnet level (second layer of defense) |
 | Supports "allow" rules only | Supports allow rules and deny rules |
@@ -182,7 +195,7 @@ The following diagram illustrates the layers of security provided by security gr
 
 ## Network Address Translation (NAT) Instances and NAT Gateways
 
-![](https://i.stack.imgur.com/2ihm3.png)
+![](images/2.7.png)
 
 By default, any instance that you launch into a private subnet in an Amazon VPC is not able to communicate with the Internet through the IGW. This is problematic if the instances within private subnets need direct access to the Internet from the Amazon VPC in order to apply security updates, download patches, or update application software. AWS provides NAT instances and NAT gateways to allow instances deployed in private subnets to gain Internet access. For common use cases, we recommend that you use a NAT gateway instead of a NAT instance. The NAT gateway provides better availability and higher bandwidth, and requires
 less administrative effort than NAT instances. 
@@ -220,7 +233,7 @@ Like a NAT instance, this managed service allows outbound Internet communication
 
 ## VPC Peering
 
-![](https://docs.aws.amazon.com/vpc/latest/peering/images/one-to-two-vpcs-instances-diagram.png)
+![](images/2.7.png)
 
 An Amazon VPC peering connection is a networking connection between two Amazon VPCs that enables instances in either Amazon VPC to communicate with each other as if they are within the same network. You can create an Amazon VPC peering connection between your own Amazon VPCs or with an Amazon VPC in another AWS account within a single region. A peering connection is neither a gateway nor an Amazon VPN connection and does not introduce a single point of failure for communication. 
 
@@ -232,7 +245,7 @@ agreements between them. Also, peering connections do not support transitive rou
 
 ### VPC peering connections do not support transitive routing:
 
-![](images/2.3.jpg)
+![](images/2.9.jpg)
 
 In this figure, VPC A has two peering connections with two different VPCs: VPC B and VPC C. Therefore, VPC A can communicate directly with VPCs B and C. Because peering connections do not support transitive routing, VPC A cannot be a transit point for traffic between VPCs B and C. In order for VPCs B and C to communicate with each other, a peering connection must be explicitly created between them.
 
@@ -245,7 +258,7 @@ Here are the important points to understand about peering:
 
 ## VPC Flow Logs 
 
-![](https://d2908q01vomqb2.cloudfront.net/da4b9237bacccdf19c0760cab7aec4a8359010b0/2019/09/13/2019-08-13_10-41-04.png)
+![](images/2.10.png)
 
 VPC Flow Logs is a feature that enables you to capture information about the IP traffic going to and from network interfaces in your VPC. Flow log data can be published to Amazon CloudWatch Logs or Amazon S3. After you've created a flow log, you can retrieve and view its data in the chosen destination.  
  
@@ -290,7 +303,7 @@ Flow logs do not capture all IP traffic. The following types of traffic are not 
 
 ### Pricing considerations 
 
-Data ingestion and archival charges for vended logs apply when you publish flow logs to CloudWatch Logs or to Amazon S3. For more information and examples, see Amazon CloudWatch Pricing. 
+Data ingestion and archival charges for vended logs apply when you publish flow logs to CloudWatch Logs or to Amazon S3. For more information and examples, see [Amazon CloudWatch Pricing](https://aws.amazon.com/ru/cloudwatch/pricing/). 
 
 
 ### More details:

@@ -3,8 +3,8 @@
 
 ## Table of Content:
 
-- [Elastic Compute Cloud - EC2](#elastic-compute-cloud-ec2)
-- [Monitoring EC2](#ec2-monitoring)
+- [Module goals](#module-goals)
+- [Elastic Compute Cloud - EC2](#ec2)
 - [EC2 Auto Scaling](#ec2-auto-scaling)
 - [Load Balancing](#load-balancing)
 - [Monitoring ELB](#elb-monitoring)
@@ -15,6 +15,28 @@
 - [AWS Certified Solutions Architect - Associate (SAA-C02): 4 Compute Services](https://learn.epam.com/detailsPage?id=946db7fc-611d-4071-bd3c-818f1a58cf99&source=EXTERNAL_COURSE)
 - [AWS Certified Solutions Architect - Associate (SAA-C02): 6 Auto Scaling and Virtual Network Services](https://learn.epam.com/detailsPage?id=93b5715a-7725-4456-8034-a897287b5787&source=EXTERNAL_COURSE)
 - [AWS for Developers: ECS and Multi-Region Load Balancing](https://learn.epam.com/detailsPage?id=5ec54920-682b-42e5-9331-d6be99711d40&source=EXTERNAL_COURSE)
+
+## Your Goals:
+
+On a high level:
+
+- Be able to name and briefly explain all AWS Compute services
+- Be able to tell how AWS provides security for Compute services (Network access, filesystem data access, etc)
+- Be able to explain how AWS charges Compute services 
+- Know base monitoring for Compute Services (metrics to be checked by AWS, metrics which are not checked by AWS)
+- Capabilities of Enhanced Monitoring for Compute Services
+- Differentiate Spot, On-demand and Reserved Instances 
+- Know the difference between Elastic IP and Public IP
+- Get familiar with Public FQDN, Private FQDN naming convention
+- Know what Bastion and Jump servers are
+
+In details:
+
+- Be familiar with EC2 instances, their types, AMI, Root Volumes, Snapshots, Burstable Instances, CPU Credits 
+- Understand Instance Metadata, User Data, cloud-init and how to troubleshoot it
+- Explain the purpose of usage, base configuration and benefits of Autoscaling, ASG, Launch Templates
+- Be familiar with Load Balancer types, target groups, Listener rules. Be able to choose LB for TLS termination, UDP - traffic, routing, originating source IP. Know on what OSI level each type of LB works
+- Explain what all EC2 Launch Wizard options mean
 
 ##  Elastic Compute Cloud - EC2
 
