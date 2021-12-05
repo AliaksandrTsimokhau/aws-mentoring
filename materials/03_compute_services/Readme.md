@@ -4,7 +4,8 @@
 ## Table of Content:
 
 - [Module goals](#module-goals)
-- [Elastic Compute Cloud - EC2](#ec2)
+- [Elastic Compute Cloud - EC2](#elastic-compute-cloud-ec2)
+- [Monitoring EC2](#ec2-monitoring)
 - [EC2 Auto Scaling](#ec2-auto-scaling)
 - [Load Balancing](#load-balancing)
 - [Monitoring ELB](#elb-monitoring)
@@ -16,7 +17,7 @@
 - [AWS Certified Solutions Architect - Associate (SAA-C02): 6 Auto Scaling and Virtual Network Services](https://learn.epam.com/detailsPage?id=93b5715a-7725-4456-8034-a897287b5787&source=EXTERNAL_COURSE)
 - [AWS for Developers: ECS and Multi-Region Load Balancing](https://learn.epam.com/detailsPage?id=5ec54920-682b-42e5-9331-d6be99711d40&source=EXTERNAL_COURSE)
 
-## Your Goals:
+## Module goals:
 
 On a high level:
 
