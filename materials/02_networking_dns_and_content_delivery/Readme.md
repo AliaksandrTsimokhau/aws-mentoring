@@ -3,7 +3,7 @@
 
 ## Table of Content:
 
-- [Module Goals](#module-goals)
+- [Your Goals](#your-goals)
 - [VPC Overview](#vpc-overview)
 - [Amazon Virtual Private Cloud](#amazon-virtual-private-cloud-amazon-vpc)
 - [Elastic Network Interfaces](#elastic-network-interfaces-enis)
@@ -29,7 +29,7 @@
 
 
 
-## Module Goals:
+## Your Goals:
 
 - To get familiar with AWS Network Architecture: VPC, Subnets, Private/Public subnets layout, Nat Gateways, Routing Tables, Elastic Network Interfaces (ENI) 
 - Explain the difference between Default VPC / Custom VPC, Public/Private Subnets, their usage pros and cons 
