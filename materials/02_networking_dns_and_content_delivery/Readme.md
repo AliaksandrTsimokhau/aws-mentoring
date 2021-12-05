@@ -3,10 +3,10 @@
 
 ## Table of Content:
 
-- [Your goals](#your-goals)
-- [VPC Service Overview](#vpc-overview)
-- [VPC Setup](#amazon-virtual-private-cloud-amazon-vpc)
-- [Elastic Network Interfaces](elastic-network-interfaces-enis)
+- [Your Goals](#your-goals)
+- [VPC Overview](#vpc-overview)
+- [Amazon Virtual Private Cloud](#amazon-virtual-private-cloud-amazon-vpc)
+- [Elastic Network Interfaces](#elastic-network-interfaces-enis)
 - [Elastic IP Addresses](#elastic-ip-addresses-eips)
 - [VPC Security](#vpc-security)
 - [NAT Instances and NAT Gateways](#network-address-translation-nat-instances-and-nat-gateways)
@@ -31,12 +31,12 @@
 
 ## Your Goals:
 
-- To get familiar with AWS Network Architecture: VPC, Subnets, Private-Public subnets layout, Nat Gateways, Routing Tables, Elastic Network Interfaces (ENI) 
-- Explain the difference between Default VPC / Custom VPC, Public / Private Subnets, their usage pros and cons 
+- To get familiar with AWS Network Architecture: VPC, Subnets, Private/Public subnets layout, Nat Gateways, Routing Tables, Elastic Network Interfaces (ENI) 
+- Explain the difference between Default VPC / Custom VPC, Public/Private Subnets, their usage pros and cons 
 - To know how to establish Cross VPC connectivity: VPC Peering, Transit Gateway 
 - To know how to secure your Networks (NACL and Security Groups, the difference between them) 
-- To get familiar with AWS DNS Service(AmazonProvidedDNS), DHCPs Option Sets 
-- Understand Route53: Public / Private Zones, Types of Records (including CNAME and Aliases) 
+- To get familiar with AWS DNS Service (AmazonProvidedDNS), DHCPs Option Sets 
+- Understand Route53: Public/Private Zones, Types of Records (including CNAME and Aliases) 
 - Learn about Content Delivery Network Service 
 
 ## VPC Overview 
