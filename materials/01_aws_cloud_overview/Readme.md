@@ -1,4 +1,3 @@
-
 >## ! DISCLAIMER
 >Despite the most of the labs in this course can be done using the AWS free tier, i.e. without any charging, there a couple of tasks that require creation of paid resources.
 Resources like NAT Gateway, Route53 zone etc., will cost you some money (but not that much, fortunately). Anyway, before creating any type of resources, please be sure you carefully read and understood the appropriate pricing policy. Every type of resource is AWS has its own pricing page, for example [Route53 pricing](https://aws.amazon.com/route53/pricing/). If you cannot find the pricing policy in official AWS documentation, just google it, for example "NAT gateway pricing".
@@ -6,13 +5,13 @@ To avoid extra money expenditures, you can [set up a billing alert](https://docs
 And of course, do not forget cleaning up all the unnecessary resources after completing the lab.
 
 
-# Module goals
+# Your goals
 
 - Know about AWS Fundamentals Course  
 
-- Be familiar with The Five Pillars of AWS 
+- Be familiar with "The Five Pillars of AWS"
 
-- Understand Shared Responsibility Model  
+- Understand "Shared Responsibility Model" 
 
 - Get brief familiarity with AWS provided services and domains 
 
