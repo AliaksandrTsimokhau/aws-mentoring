@@ -31,13 +31,13 @@
 
 ## Your Goals:
 
-- To get familiar with AWS Network Architecture: VPC, Subnets, Private/Public subnets layout, Nat Gateways, Routing Tables, Elastic Network Interfaces (ENI) 
+- To get familiar with AWS Network Architecture components: VPC, Subnets, Private/Public subnets layout, Nat Gateways, Routing Tables, Elastic Network Interfaces(ENI) 
 - Explain the difference between Default VPC / Custom VPC, Public/Private Subnets, their usage pros and cons 
 - To know how to establish Cross VPC connectivity: VPC Peering, Transit Gateway 
 - To know how to secure your Networks (NACL and Security Groups, the difference between them) 
 - To get familiar with AWS DNS Service (AmazonProvidedDNS), DHCPs Option Sets 
 - Understand Route53: Public/Private Zones, Types of Records (including CNAME and Aliases) 
-- Learn about Content Delivery Network Service 
+- Learn about AWS CloudFront(Content Delivery Network)
 
 ## VPC Overview 
 
