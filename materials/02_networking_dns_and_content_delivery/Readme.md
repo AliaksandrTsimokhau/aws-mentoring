@@ -288,11 +288,11 @@ Data ingestion and archival charges for vended logs apply when you publish flow 
 
 ### Videos:
 
-- https://www.youtube.com/embed/fpxDGU2KdkA
-- https://www.youtube.com/watch?v=bGDMeD6kOz0
-- https://www.youtube.com/watch?v=hiKPPy584Mg
-- https://www.youtube.com/watch?v=_A5L4jT-K9I
-- https://www.youtube.com/watch?v=aczp7gCZZlQ
+- [Amazon Virtual Private Cloud (VPC) | AWS Tutorial For Beginners](https://www.youtube.com/embed/fpxDGU2KdkA)
+- [AWS VPC & Subnets | Amazon Web Services BASICS](https://www.youtube.com/watch?v=bGDMeD6kOz0)
+- [AWS Networking Fundamentals](https://www.youtube.com/watch?v=hiKPPy584Mg)
+- [VPC Flow Logs | What is Flow Logs?](https://www.youtube.com/watch?v=_A5L4jT-K9I)
+- [Setup VPC Flow Logs To CloudWatch Log Group](https://www.youtube.com/watch?v=aczp7gCZZlQ)
 
 ### Documentation:
 
