@@ -12,22 +12,7 @@
 - [NAT Instances and NAT Gateways](#network-address-translation-nat-instances-and-nat-gateways)
 - [VPC Peering](#vpc-peering)
 - [VPC Flow Logs](#vpc-flow-logs)
-
-## Videos:
-
-- https://www.youtube.com/embed/fpxDGU2KdkA
-- https://www.youtube.com/watch?v=bGDMeD6kOz0
-- https://www.youtube.com/watch?v=hiKPPy584Mg
-- https://www.youtube.com/watch?v=_A5L4jT-K9I
-- https://www.youtube.com/watch?v=aczp7gCZZlQ
-
-## Recommended Training:
-
-- [AWS: Networking](https://learn.epam.com/detailsPage?id=2699c11b-d1c8-455a-bf5e-1af537ba363c&source=EXTERNAL_COURSE)
-- [AWS Certified Solutions Architect - Associate (SAA-C02): 3 Virtual Private Cloud](https://learn.epam.com/detailsPage?id=b29ebc21-f056-4436-a748-8b7ce12efbd1&source=EXTERNAL_COURSE)
-- [AWS Certified Solutions Architect - Associate (SAA-C02): 6 Auto Scaling and Virtual Network Services](https://learn.epam.com/detailsPage?id=93b5715a-7725-4456-8034-a897287b5787&source=EXTERNAL_COURSE)
-
-
+- [More details](#more-details)
 
 ## Your Goals:
 
@@ -88,13 +73,6 @@ You can request an increase for these quotas. For some of these quotas, you 
 
 https://aws.amazon.com/vpc/pricing/ 
  
-## More details 
-
-- [What is VPC](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html)
-- [Private Addresses RFC1918](https://tools.ietf.org/html/rfc1918)
-- [Prefixes](https://www.ripe.net/about-us/press-centre/understanding-ip-addressing)
-- [VPC Limits](https://docs.aws.amazon.com/vpc/latest/userguide/amazon-vpc-limits.html)
-
 
 # Amazon Virtual Private Cloud (Amazon VPC)
 
@@ -306,8 +284,28 @@ Flow logs do not capture all IP traffic. The following types of traffic are not 
 Data ingestion and archival charges for vended logs apply when you publish flow logs to CloudWatch Logs or to Amazon S3. For more information and examples, see [Amazon CloudWatch Pricing](https://aws.amazon.com/ru/cloudwatch/pricing/). 
 
 
-### More details:
+## More details:
 
+### Videos:
+
+- https://www.youtube.com/embed/fpxDGU2KdkA
+- https://www.youtube.com/watch?v=bGDMeD6kOz0
+- https://www.youtube.com/watch?v=hiKPPy584Mg
+- https://www.youtube.com/watch?v=_A5L4jT-K9I
+- https://www.youtube.com/watch?v=aczp7gCZZlQ
+
+### Documentation:
+
+- [What is VPC](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html)
+- [Private Addresses RFC1918](https://tools.ietf.org/html/rfc1918)
+- [Prefixes](https://www.ripe.net/about-us/press-centre/understanding-ip-addressing)
+- [VPC Limits](https://docs.aws.amazon.com/vpc/latest/userguide/amazon-vpc-limits.html)
 - [Publishing flow logs to CloudWatch Logs](https://docs.aws.amazon.com/vpc/latest/userguide/flow-logs-cwl.html)
 - [Publishing flow logs to Amazon S3](https://docs.aws.amazon.com/vpc/latest/userguide/flow-logs-s3.html)
 - [Troubleshooting VPC Flow Logs](https://docs.aws.amazon.com/vpc/latest/userguide/flow-logs-troubleshooting.html)
+
+### Recommended Trainings:
+
+- [AWS: Networking](https://learn.epam.com/detailsPage?id=2699c11b-d1c8-455a-bf5e-1af537ba363c&source=EXTERNAL_COURSE)
+- [AWS Certified Solutions Architect - Associate (SAA-C02): 3 Virtual Private Cloud](https://learn.epam.com/detailsPage?id=b29ebc21-f056-4436-a748-8b7ce12efbd1&source=EXTERNAL_COURSE)
+- [AWS Certified Solutions Architect - Associate (SAA-C02): 6 Auto Scaling and Virtual Network Services](https://learn.epam.com/detailsPage?id=93b5715a-7725-4456-8034-a897287b5787&source=EXTERNAL_COURSE)
