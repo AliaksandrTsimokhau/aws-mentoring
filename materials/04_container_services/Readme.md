@@ -119,12 +119,24 @@ EKS supports AWS Fargate to run your Kubernetes applications using serverless co
 
 
 #### When to use EC2 or Fargate mode?
-| Amazon ECS | AWS Fargate |
+| Amazon EC2 | AWS Fargate |
 | ----------- | ----------- |
-|Good for high resource utilization|Great for one-tiem tasks|
+|Good for high resource utilization|Great for one-time tasks|
+|Need to manage, secure and patch OS, AMI, etc.|Serverless|
 |Large workload, optimized for price|Batch tasks|
 |Windows-based containers, persistent storage|Scheduled Tasks|
-|Nano-services (RAM < 512MB)|Tasks with unpredictable load spikes|
+||Tasks with unpredictable load spikes|
+
+### ECS or EKS?
+| Amazon ECS | AWS EKS |
+| ----------- | ----------- |
+|Lower cost|Full control|
+|Simplicity - Require less expertise and operational knowledge|Flexibility - Requires Solid k8s knowledge|
+|Greater AWS integration & IAM security|Platform agnostic|
+|AWS proprietary technology. Potential vendor lock-in. Not portable. | Open-source. Full portability between different clouds.|
+|Limited community assistance. Corporate AWS support.|Vibrant ecosystem and community|
+|When Kubernetes is too much|When you want more control over your tooling|
+|Easy to deploy|Moderate effor to deploy (AWS and k8s knoledge required)|
 
 
 ### Pricing considerations 
