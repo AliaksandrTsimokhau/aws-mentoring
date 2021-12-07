@@ -219,7 +219,7 @@ The pricing is consolidated on common [AWS page](https://aws.amazon.com/elasticl
 
 ## More details
 
-###Videos:
+### Videos:
 
 - [AWS re:Invent 2020: Selecting the right Amazon EC2 instance for your workloads](https://www.youtube.com/watch?v=q5Dn9gcmpJg)
 - [How to setup EC2 Auto Scaling with AWS](https://www.youtube.com/watch?v=aVE0w40obKM)
