@@ -104,6 +104,29 @@ EKS automatically applies the latest security patches to your cluster’s contro
 **Serverless Compute**
 
 EKS supports AWS Fargate to run your Kubernetes applications using serverless compute. Fargate removes the need to provision and manage servers, lets you specify and pay for resources per application, and improves security through application isolation by design.
+
+### ECS on EC2 or Fargate?
+
+#### Technical comparison
+| Amazon ECS | AWS Fargate |
+| ----------- | ----------- |
+|Need to manage EC2 instances|Easier management|
+|Flexible configuration of task resources|Fixed vCPU - RAM combinations (min 521 MB|
+|Limited tasks per instance|No need to watch task limits|
+|Flexible network options|Only **awsvpc** mode - ALB: Target Type = IP |
+|Persistent volumes|Non-persistent storage only|
+|Charged per EC2 resources|Charged per vCPU/RAM, used since docker pull till task termination|
+
+
+#### When to use EC2 or Fargate mode?
+| Amazon ECS | AWS Fargate |
+| ----------- | ----------- |
+|Good for high resource utilization|Great for one-tiem tasks|
+|Large workload, optimized for price|Batch tasks|
+|Windows-based containers, persistent storage|Scheduled Tasks|
+|Nano-services (RAM < 512MB)|Tasks with unpredictable load spikes|
+
+
 ### Pricing considerations 
 
 With AWS EKS, you have to pay for: 
