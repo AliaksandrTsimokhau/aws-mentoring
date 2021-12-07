@@ -140,3 +140,4 @@ More info can be found on [AWS EKS pricing page](https://aws.amazon.com/eks/pric
 ### More details 
 
 - https://www.youtube.com/watch?v=7vxDWDD2YnM  
+- https://videoportal.epam.com/playlist/PaKAnOR0
