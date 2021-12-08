@@ -68,6 +68,17 @@ You can run them by choosing on of the following launch types:
 Please get [more details here](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/application_architecture.html). 
 -->
 
+### ECS on EC2 vs Fargate - Technical comparison
+| Amazon EC2 | AWS Fargate |
+| ----------- | ----------- |
+|Need to manage EC2 instances|Easier management|
+|Flexible configuration of task resources|Fixed vCPU - RAM combinations (min 521 MB)|
+|Limited tasks per instance|No need to watch task limits|
+|Flexible network options|Only **awsvpc** mode - ALB: Target Type = IP |
+|Persistent volumes|Non-persistent storage only|
+|Charged per EC2 resources|Charged per vCPU/RAM, used since docker pull till task termination|
+|Supports EC2 Spot Instances|Supports Fargate Spot|
+
 ### Getting started Videos:
 
 - [Amazon ECS: Core Concepts](https://youtu.be/eq4wL2MiNqo)
@@ -104,6 +115,30 @@ EKS automatically applies the latest security patches to your cluster’s contro
 **Serverless Compute**
 
 EKS supports AWS Fargate to run your Kubernetes applications using serverless compute. Fargate removes the need to provision and manage servers, lets you specify and pay for resources per application, and improves security through application isolation by design.
+
+### When to use ECS on EC2 or Fargate mode?
+| Amazon EC2 | AWS Fargate |
+| ----------- | ----------- |
+|Good for high resource utilization|Great for one-time tasks|
+|Need to manage, secure and patch OS, AMI, etc.|Serverless|
+|Large workload, optimized for price|Batch tasks|
+|Windows-based containers, persistent storage|Scheduled Tasks|
+||Tasks with unpredictable load spikes|
+
+### ECS or EKS?
+| Amazon ECS | AWS EKS |
+| ----------- | ----------- |
+|Lower cost|Full control|
+|Simplicity - Require less expertise and operational knowledge|Flexibility - Requires Solid k8s knowledge|
+|Greater AWS integration & IAM security|Platform agnostic*|
+|AWS proprietary technology. Potential vendor lock-in. Not portable. | Open-source. Full portability between different clouds.*|
+|Limited community assistance. Corporate AWS support.|Vibrant ecosystem and community*|
+|When Kubernetes is too much|When you want more control over your tooling|
+|Easy to deploy|Moderate effor to deploy (AWS and k8s knoledge required)|
+|You can run ECS tasks on AWS Fargate|You can run Kubernetes pods on AWS Fargate|
+
+*EKS - is an AWS proprietary technology as well. You should understood that you couldn't get the same experience with Kubernetes clusters from other cloud providers. There are a lot of AWS-specific features like ALB-ingress, IP-addressing, managed node groups, etc. AWS owns and control the process of providing features(or fixing bugs) for controls plain, addons and worker nodes. Limited number of Kubernetes releases are available. You are not able to control the master plane.
+
 ### Pricing considerations 
 
 With AWS EKS, you have to pay for: 
@@ -117,3 +152,4 @@ More info can be found on [AWS EKS pricing page](https://aws.amazon.com/eks/pric
 ### More details 
 
 - https://www.youtube.com/watch?v=7vxDWDD2YnM  
+- https://videoportal.epam.com/playlist/PaKAnOR0
