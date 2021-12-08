@@ -138,8 +138,8 @@ EKS supports AWS Fargate to run your Kubernetes applications using serverless co
 |When Kubernetes is too much|When you want more control over your tooling|
 |Easy to deploy|Moderate effor to deploy (AWS and k8s knoledge required)|
 
-*EKS - is an AWS proprietary technology too. You should understood that you couldn get the same experience with Kubernetes clusters from other cloud providers.
-There are a lot of AWS-specific features like ALB-ingress, IP-addressing, managed node groups etc.
+*EKS - is an AWS proprietary technology as well. You should understood that you couldn't get the same experience with Kubernetes clusters from other cloud providers.
+There are a lot of AWS-specific features like ALB-ingress, IP-addressing, managed node groups, etc. AWS owns and control the process of providing features(or fixing bugs) for controls plain, addons and worker nodes. Limited number of kubenrnetes releases are availible. You are not able to control master plane.
 
 ### Pricing considerations 
 
