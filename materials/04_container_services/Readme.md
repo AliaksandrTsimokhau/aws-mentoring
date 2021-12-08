@@ -68,6 +68,17 @@ You can run them by choosing on of the following launch types:
 Please get [more details here](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/application_architecture.html). 
 -->
 
+### ECS on EC2 vs Fargate - Technical comparison
+| Amazon EC2 | AWS Fargate |
+| ----------- | ----------- |
+|Need to manage EC2 instances|Easier management|
+|Flexible configuration of task resources|Fixed vCPU - RAM combinations (min 521 MB)|
+|Limited tasks per instance|No need to watch task limits|
+|Flexible network options|Only **awsvpc** mode - ALB: Target Type = IP |
+|Persistent volumes|Non-persistent storage only|
+|Charged per EC2 resources|Charged per vCPU/RAM, used since docker pull till task termination|
+|Supports EC2 Spot Instances|Supports Fargate Spot|
+
 ### Getting started Videos:
 
 - [Amazon ECS: Core Concepts](https://youtu.be/eq4wL2MiNqo)
@@ -105,21 +116,7 @@ EKS automatically applies the latest security patches to your cluster’s contro
 
 EKS supports AWS Fargate to run your Kubernetes applications using serverless compute. Fargate removes the need to provision and manage servers, lets you specify and pay for resources per application, and improves security through application isolation by design.
 
-### ECS on EC2 or Fargate?
-
-#### Technical comparison
-| Amazon ECS | AWS Fargate |
-| ----------- | ----------- |
-|Need to manage EC2 instances|Easier management|
-|Flexible configuration of task resources|Fixed vCPU - RAM combinations (min 521 MB|
-|Limited tasks per instance|No need to watch task limits|
-|Flexible network options|Only **awsvpc** mode - ALB: Target Type = IP |
-|Persistent volumes|Non-persistent storage only|
-|Charged per EC2 resources|Charged per vCPU/RAM, used since docker pull till task termination|
-|Supports EC2 Spot Instances|Supports Fargate Spot|
-
-
-#### When to use EC2 or Fargate mode?
+### When to use ECS on EC2 or Fargate mode?
 | Amazon EC2 | AWS Fargate |
 | ----------- | ----------- |
 |Good for high resource utilization|Great for one-time tasks|
