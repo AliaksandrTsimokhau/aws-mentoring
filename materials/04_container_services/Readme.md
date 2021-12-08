@@ -116,6 +116,7 @@ EKS supports AWS Fargate to run your Kubernetes applications using serverless co
 |Flexible network options|Only **awsvpc** mode - ALB: Target Type = IP |
 |Persistent volumes|Non-persistent storage only|
 |Charged per EC2 resources|Charged per vCPU/RAM, used since docker pull till task termination|
+|Supports EC2 Spot Instances|Supports Fargate Spot|
 
 
 #### When to use EC2 or Fargate mode?
@@ -137,9 +138,9 @@ EKS supports AWS Fargate to run your Kubernetes applications using serverless co
 |Limited community assistance. Corporate AWS support.|Vibrant ecosystem and community*|
 |When Kubernetes is too much|When you want more control over your tooling|
 |Easy to deploy|Moderate effor to deploy (AWS and k8s knoledge required)|
+|You can run ECS tasks on AWS Fargate|You can run Kubernetes pods on AWS Fargate|
 
-*EKS - is an AWS proprietary technology as well. You should understood that you couldn't get the same experience with Kubernetes clusters from other cloud providers.
-There are a lot of AWS-specific features like ALB-ingress, IP-addressing, managed node groups, etc. AWS owns and control the process of providing features(or fixing bugs) for controls plain, addons and worker nodes. Limited number of kubenrnetes releases are availible. You are not able to control master plane.
+*EKS - is an AWS proprietary technology as well. You should understood that you couldn't get the same experience with Kubernetes clusters from other cloud providers. There are a lot of AWS-specific features like ALB-ingress, IP-addressing, managed node groups, etc. AWS owns and control the process of providing features(or fixing bugs) for controls plain, addons and worker nodes. Limited number of Kubernetes releases are available. You are not able to control the master plane.
 
 ### Pricing considerations 
 
