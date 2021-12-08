@@ -18,14 +18,12 @@
 - VPC Flow Logs
 - [**Practice**](/materials/02_networking_dns_and_content_delivery/tasks/Readme.md)
 
-
 #### 3. [Compute Services](/materials/03_compute_services/Readme.md)
 - Elastic Compute Cloud
 - AutoScaling
 - Elastic LoadBalancing
 - Monitoring (EC2, LB)
 - [**Practice**](/materials/03_compute_services/tasks/Readme.md)
-
 
 #### 4. [Container Services](/materials/04_container_services/Readme.md)
 - Elastic Container Registry
@@ -35,12 +33,12 @@
 - [**Practice**](/materials/04_container_services/tasks/Readme.md)
 
 #### 5. [Storage Services](/materials/05_storage_services/Readme.md)
-- S3, S3 Glacier
-- Elastic Block Store
-- Elastic File System
-- FSx
-- Storage Gateway
-- AWS Backup
+- Elastic Block Storage (EBS)
+- EBS Snapshots
+- Elastic File System (EFS)
+- EFS Backup Solutions
+- FSx for Windows File Server
+- Simple Storage Service (S3)
 - [**Practice**](/materials/05_storage_services/tasks/Readme.md)
 
 #### 6. [Database Services](materials/06_database_services/Readme.md)
