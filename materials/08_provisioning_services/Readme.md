@@ -2,12 +2,12 @@
 
 ## Table of Content
 
-- [Module goals](#module-goals)
+- [Your goals](#your-goals)
 - Cloudformation
 - Systems Manager
 
 
-## Module goals
+## Your goals
 
 - Explain what CloudFormation template and stack are 
 
