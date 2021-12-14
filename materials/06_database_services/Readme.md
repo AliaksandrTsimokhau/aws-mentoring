@@ -2,7 +2,7 @@
 
 ## Table of Content
 
-- [Module goals](#module-goals)
+- [Your goals](#your-goals)
 - [Relational Database Service (RDS)](#amazon-relational-database-service-rds-amazon-rds)
 - [DynamoDB](#amazon-dynamodb) 
 - [ElastiCache](#amazon-elasticache)
@@ -15,7 +15,7 @@
 - [AWS: Storage and Data Management](https://learn.epam.com/detailsPage?id=b08af5ea-1be0-4d45-98d5-90491bbaa32f&source=EXTERNAL_COURSE)
 
 
-## Module goals
+## Your goals
 
 - Differentiate database types: Relational, NoSQL and In-Memory 
 
