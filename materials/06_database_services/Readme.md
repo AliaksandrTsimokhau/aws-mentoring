@@ -29,21 +29,11 @@ Modernize your data infrastructure with fully managed, purpose-built databases.
 |Database type|Use cases|AWS service|Free Tier Offer Details|Product Pricing|
 |:----|:----|:----|:----|:----|
 |Relational|Traditional applications, enterprise resource planning (ERP), customer relationship management (CRM), ecommerce|Amazon Aurora|NA|https://aws.amazon.com/rds/aurora/pricing/|
-|Relational|Traditional applications, enterprise resource planning (ERP), customer relationship management (CRM), ecommerce|Amazon RDS|12 MONTHS FREE
- 750 hours per month of db.t2.micro database usage (applicable database engines)
- 20 GB of general purpose (SSD) database storage
- 20 GB of storage for database backups and database snapshots|Amazon RDS Pricing|
-|Relational|Traditional applications, enterprise resource planning (ERP), customer relationship management (CRM), ecommerce|Amazon Redshift|2-MONTH FREE TRIAL
- 750 DC2.Large node hours per month|Amazon Redshift Pricing|
-|Key-value|High-traffic web applications, ecommerce systems, gaming applications|Amazon DynamoDB|ALWAYS FREE
- 25 GB of storage
- 25 units of write capacity
- 25 units of read capacity (enough to handle up to 200 million requests per month)|Amazon DynamoDB Pricing|
-|In-memory|Caching, session management, gaming leaderboards, geospatial applications|Amazon ElastiCache|12 MONTHS FREE
- 750 hours of cache.t2micro node usage|Amazon ElastiCache Pricing|
-|In-memory|Caching, session management, gaming leaderboards, geospatial applications|Amazon MemoryDB for Redis|2-MONTH FREE TRIAL
- 750 t4g.small instance hours per month
- 20 GB of data per month|Amazon MemoryDB Pricing|
+|Relational|Traditional applications, enterprise resource planning (ERP), customer relationship management (CRM), ecommerce|Amazon RDS|12 MONTHS FREE 750 hours per month of db.t2.micro database usage (applicable database engines) 20 GB of general purpose (SSD) database storage 20 GB of storage for database backups and database snapshots|Amazon RDS Pricing|
+|Relational|Traditional applications, enterprise resource planning (ERP), customer relationship management (CRM), ecommerce|Amazon Redshift|2-MONTH FREE TRIAL 750 DC2.Large node hours per month|Amazon Redshift Pricing|
+|Key-value|High-traffic web applications, ecommerce systems, gaming applications|Amazon DynamoDB|ALWAYS FREE 25 GB of storage 25 units of write capacity 25 units of read capacity (enough to handle up to 200 million requests per month)|Amazon DynamoDB Pricing|
+|In-memory|Caching, session management, gaming leaderboards, geospatial applications|Amazon ElastiCache|12 MONTHS FREE 750 hours of cache.t2micro node usage|Amazon ElastiCache Pricing|
+|In-memory|Caching, session management, gaming leaderboards, geospatial applications|Amazon MemoryDB for Redis|2-MONTH FREE TRIAL 750 t4g.small instance hours per month 20 GB of data per month|Amazon MemoryDB Pricing|
 |Document|Content management, catalogs, user profiles|Amazon DocumentDB (with MongoDB compatibility)|NA|https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjUtqTSten0AhWLhP0HHRctCRwQFnoECAYQAQ&url=https%3A%2F%2Faws.amazon.com%2Fdocumentdb%2Fpricing%2F&usg=AOvVaw07G4hRzgYbz2DI3gOINZQO|
 |Wide column|High-scale industrial apps for equipment maintenance, fleet management, and route optimization|Amazon Keyspaces|For the first three months, you are offered a monthly free tier of 30 million on-demand write request units, 30 million on-demand read request units, and 1 GB of storage (limit of one free tier per payer account). Your free tier starts from the first month when you create your first Amazon Keyspaces resource.|https://aws.amazon.com/keyspaces/pricing/|
 |Graph|Fraud detection, social networking, recommendation engines|Amazon Neptune|NA|https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwi5rKmxtun0AhUxh_0HHRbrAZUQFnoECBUQAQ&url=https%3A%2F%2Faws.amazon.com%2Fneptune%2Fpricing%2F&usg=AOvVaw0WB9wc136BbfkuG_e2iYYx|
