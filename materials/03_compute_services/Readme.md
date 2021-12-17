@@ -9,22 +9,17 @@
 - [EC2 Auto Scaling](#ec2-auto-scaling)
 - [Load Balancing](#load-balancing)
 - [Monitoring ELB](#elb-monitoring)
+- [More details](#more-details)
 
-
-## Recommended Trainings:
-
-- [AWS Certified Solutions Architect - Associate (SAA-C02): 4 Compute Services](https://learn.epam.com/detailsPage?id=946db7fc-611d-4071-bd3c-818f1a58cf99&source=EXTERNAL_COURSE)
-- [AWS Certified Solutions Architect - Associate (SAA-C02): 6 Auto Scaling and Virtual Network Services](https://learn.epam.com/detailsPage?id=93b5715a-7725-4456-8034-a897287b5787&source=EXTERNAL_COURSE)
-- [AWS for Developers: ECS and Multi-Region Load Balancing](https://learn.epam.com/detailsPage?id=5ec54920-682b-42e5-9331-d6be99711d40&source=EXTERNAL_COURSE)
 
 ## Your Goals:
 
 On a high level:
 
 - Be able to name and briefly explain all AWS Compute services
-- Be able to tell how AWS provides security for Compute services (Network access, filesystem data access, etc)
+- Be able to tell how AWS provides security for Compute services (data-at-rest and data-in-transit)
 - Be able to explain how AWS charges Compute services 
-- Know base monitoring for Compute Services (metrics to be checked by AWS, metrics which are not checked by AWS)
+- Know base monitoring for Compute Services (which metrics provided\not provided by default in CloudWatch)
 - Capabilities of Enhanced Monitoring for Compute Services
 - Differentiate Spot, On-demand and Reserved Instances 
 - Know the difference between Elastic IP and Public IP
@@ -38,6 +33,7 @@ In details:
 - Explain the purpose of usage, base configuration and benefits of Autoscaling, ASG, Launch Templates
 - Be familiar with Load Balancer types, target groups, Listener rules. Be able to choose LB for TLS termination, UDP - traffic, routing, originating source IP. Know on what OSI level each type of LB works
 - Explain what all EC2 Launch Wizard options mean
+
 
 ##  Elastic Compute Cloud - EC2
 
@@ -62,9 +58,13 @@ Amazon EC2 provides the following features:
 - Metadata (including tags), that you can create and assign to your Amazon EC2 resources 
 - Virtual networks you can create that are logically isolated from the rest of the AWS Cloud, and that you can optionally connect to your own network, known as virtual private clouds(VPCs) 
 
+### AMIs:
 
-### EC2 News:
-- [EC2 News](https://aws.amazon.com/ec2/?ec2-whats-new.sort-by=item.additionalFields.postDateTime&ec2-whats-new.sort-order=desc)
+> An Amazon Machine Image (AMI) provides the information required to launch an instance. You must specify an AMI when you launch an instance. You can launch multiple instances from a single AMI when you need multiple instances with the same configuration. You can use different AMIs to launch instances when you need instances with different configurations.
+
+An AMI includes: one or more Amazon EBS snapshots,  launch permissions that control which AWS accounts can use the AMI to launch instances and a block device mapping that specifies the volumes to attach to the instance when it's launched.
+
+Lear more about AMI types, its lifecycle and other details in [AWS documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html).
 
 ### Cautions
 
@@ -100,18 +100,6 @@ You could collect following EC2 metrics:
 - NetworkPacketsOut 
 - MetadataNoToken 
 
-#### More details:
-
-- [EC2 CloudWatch Metrics](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/viewing_metrics_with_cloudwatch.html#ec2-cloudwatch-metrics)
-- [EC2 Monitoring Overview (Video)](https://www.youtube.com/watch?v=Z0agxlUrwxI)
-- [EC2 Monitoring using CloudWatch Agent (Video)](https://www.youtube.com/watch?v=vAnIhIwE5hY)
-- [EC2 Monitoring](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/monitoring_ec2.html)
-- [Monitoring Best Practices](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/monitoring_best_practices.html)
-
-You can use the following dimensions to refine the metrics listed in the previous list: 
-
-- [EC2 CloudWatch Dimensions](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/viewing_metrics_with_cloudwatch.html#ec2-cloudwatch-dimensions) 
-
 
 ## EC2 Auto Scaling
 
@@ -144,9 +132,6 @@ To view the current quotas for your account, open the Amazon EC2 console at http
 
 ![](images/ec2-limits-2.jpg)
 
-### How to setup EC2 Auto Scaling:
-
-- https://www.youtube.com/watch?v=aVE0w40obKM
 
 ## Load Balancing
 
@@ -228,13 +213,35 @@ You can use the following features to monitor your load balancers, analyze traff
 - **CloudTrail logs**  
   AWS CloudTrail enables you to keep track of the calls made to the Elastic Load Balancing API by or on behalf of your AWS account. CloudTrail stores the information in log files in the Amazon S3 bucket that you specify. 
 
-#### More Details:
-
-- [Monitor your Application Load Balancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-monitoring.html)
-- [Troubleshoot your Application Load Balancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-troubleshooting.html)
-
 ### Pricing considerations
 The pricing is consolidated on common [AWS page](https://aws.amazon.com/elasticloadbalancing/pricing/)
 
-### More details
+
+## More details
+
+### Videos:
+
+- [AWS re:Invent 2020: Selecting the right Amazon EC2 instance for your workloads](https://www.youtube.com/watch?v=q5Dn9gcmpJg)
+- [How to setup EC2 Auto Scaling with AWS](https://www.youtube.com/watch?v=aVE0w40obKM)
 - [AWS re:Invent 2020: Elastic Load Balancing: A year of innovations](https://youtu.be/cntxaahxtfM)
+- [EC2 Monitoring Overview (Video)](https://www.youtube.com/watch?v=Z0agxlUrwxI)
+- [EC2 Monitoring using CloudWatch Agent (Video)](https://www.youtube.com/watch?v=vAnIhIwE5hY)
+
+### Documentation:
+
+- [EC2 News](https://aws.amazon.com/ec2/?ec2-whats-new.sort-by=item.additionalFields.postDateTime&ec2-whats-new.sort-order=desc)
+- [Monitor your Application Load Balancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-monitoring.html)
+- [Troubleshoot your Application Load Balancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-troubleshooting.html)
+- [EC2 CloudWatch Metrics](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/viewing_metrics_with_cloudwatch.html#ec2-cloudwatch-metrics)
+- [EC2 Monitoring](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/monitoring_ec2.html)
+- [Monitoring Best Practices](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/monitoring_best_practices.html)
+- [EC2 CloudWatch Dimensions](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/viewing_metrics_with_cloudwatch.html#ec2-cloudwatch-dimensions) 
+
+
+### Recommended Trainings:
+
+- [AWS Certified Solutions Architect - Associate (SAA-C02): 4 Compute Services](https://learn.epam.com/detailsPage?id=946db7fc-611d-4071-bd3c-818f1a58cf99&source=EXTERNAL_COURSE)
+- [AWS Certified Solutions Architect - Associate (SAA-C02): 6 Auto Scaling and Virtual Network Services](https://learn.epam.com/detailsPage?id=93b5715a-7725-4456-8034-a897287b5787&source=EXTERNAL_COURSE)
+- [AWS for Developers: ECS and Multi-Region Load Balancing](https://learn.epam.com/detailsPage?id=5ec54920-682b-42e5-9331-d6be99711d40&source=EXTERNAL_COURSE)
+
+
