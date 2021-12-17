@@ -27,21 +27,18 @@ Modernize your data infrastructure with fully managed, purpose-built databases.
 
 
 |Database type|Use cases|AWS service|Free Tier Offer Details|Product Pricing|
-|:----|:----|:----|:----|:----|
-|Relational|Traditional applications, enterprise resource planning (ERP), customer relationship management (CRM), ecommerce|Amazon Aurora|NA|[Amazon Aurora Pricing](https://aws.amazon.com/rds/aurora/pricing/)|
-|Relational|Traditional applications, enterprise resource planning (ERP), customer relationship management (CRM), ecommerce|Amazon RDS|12 MONTHS FREE 750 hours per month of db.t2.micro database usage (applicable database engines)  
-20 GB of general purpose (SSD) database storage  
-20 GB of storage for database backups and database snapshots  
-|[Amazon RDS Pricing](https://aws.amazon.com/rds/pricing/?p=ft&c=db)|
+|:----|:----|:----|:----:|:----|
+|Relational|Traditional applications, enterprise resource planning (ERP), customer relationship management (CRM), ecommerce|Amazon Aurora|No|[Amazon Aurora Pricing](https://aws.amazon.com/rds/aurora/pricing/)|
+|Relational|Traditional applications, enterprise resource planning (ERP), customer relationship management (CRM), ecommerce|Amazon RDS|12 MONTHS FREE 750 hours per month of db.t2.micro database usage (applicable database engines);   20 GB of general purpose (SSD) database storage   20 GB of storage for database backups and database snapshots  |[Amazon RDS Pricing](https://aws.amazon.com/rds/pricing/?p=ft&c=db)|
 |Relational|Traditional applications, enterprise resource planning (ERP), customer relationship management (CRM), ecommerce|Amazon Redshift|2-MONTH FREE TRIAL 750 DC2.Large node hours per month|[Amazon Redshift Pricing](https://aws.amazon.com/redshift/pricing/?p=ft&c=db)|
-|Key-value|High-traffic web applications, ecommerce systems, gaming applications|Amazon DynamoDB|ALWAYS FREE 25 GB of storage 25 units of write capacity 25 units of read capacity (enough to handle up to 200 million requests per month)|[Amazon DynamoDB Pricing](https://aws.amazon.com/dynamodb/pricing/?p=ft&c=db)|
+|Key-value|High-traffic web applications, ecommerce systems, gaming applications|Amazon DynamoDB|ALWAYS FREE 25 GB of storage;   25 units of write capacity;   25 units of read capacity (enough to handle up to 200 million requests per month)|[Amazon DynamoDB Pricing](https://aws.amazon.com/dynamodb/pricing/?p=ft&c=db)|
 |In-memory|Caching, session management, gaming leaderboards, geospatial applications|Amazon ElastiCache|12 MONTHS FREE 750 hours of cache.t2micro node usage|[Amazon ElastiCache Pricing](https://aws.amazon.com/elasticache/pricing/?p=ft&c=db)|
-|In-memory|Caching, session management, gaming leaderboards, geospatial applications|Amazon MemoryDB for Redis|2-MONTH FREE TRIAL 750 t4g.small instance hours per month 20 GB of data per month|[Amazon MemoryDB Pricing](https://aws.amazon.com/memorydb/pricing/?p=ft&c=db)|
-|Document|Content management, catalogs, user profiles|Amazon DocumentDB (with MongoDB compatibility)|NA|[Amazon DocumentDB Pricing](https://aws.amazon.com/documentdb/pricing/)|
-|Wide column|High-scale industrial apps for equipment maintenance, fleet management, and route optimization|Amazon Keyspaces|For the first three months, you are offered a monthly free tier of 30 million on-demand write request units, 30 million on-demand read request units, and 1 GB of storage (limit of one free tier per payer account). Your free tier starts from the first month when you create your first Amazon Keyspaces resource.|[Amazon Keyspaces Pricing](https://aws.amazon.com/keyspaces/pricing/)|
-|Graph|Fraud detection, social networking, recommendation engines|Amazon Neptune|NA|[Amazon Neptune Pricing](https://aws.amazon.com/neptune/pricing/)|
-|Time series|Internet of Things (IoT) applications, DevOps, industrial telemetry|Amazon Timestream|NA|[Amazon Timestream Pricing](https://aws.amazon.com/timestream/pricing/)|
-|Ledger|Systems of record, supply chain, registrations, banking transactions|Amazon Ledger Database Services (QLDB)|NA|[Amazon Ledger Database Services (QLDB)Pricing](https://aws.amazon.com/qldb/pricing/)|
+|In-memory|Caching, session management, gaming leaderboards, geospatial applications|Amazon MemoryDB for Redis|2-MONTH FREE TRIAL 750 t4g.small instance hours per month;   20 GB of data per month|[Amazon MemoryDB Pricing](https://aws.amazon.com/memorydb/pricing/?p=ft&c=db)|
+|Document|Content management, catalogs, user profiles|Amazon DocumentDB (with MongoDB compatibility)|No|[Amazon DocumentDB Pricing](https://aws.amazon.com/documentdb/pricing/)|
+|Wide column|High-scale industrial apps for equipment maintenance, fleet management, and route optimization|Amazon Keyspaces|3 MONTHS FREE 30 million on-demand write request units;   30 million on-demand read request units;   1 GB of storage (limit of one free tier per payer account)|[Amazon Keyspaces Pricing](https://aws.amazon.com/keyspaces/pricing/)|
+|Graph|Fraud detection, social networking, recommendation engines|Amazon Neptune|No|[Amazon Neptune Pricing](https://aws.amazon.com/neptune/pricing/)|
+|Time series|Internet of Things (IoT) applications, DevOps, industrial telemetry|Amazon Timestream|No|[Amazon Timestream Pricing](https://aws.amazon.com/timestream/pricing/)|
+|Ledger|Systems of record, supply chain, registrations, banking transactions|Amazon Ledger Database Services (QLDB)|No|[Amazon Ledger Database Services (QLDB)Pricing](https://aws.amazon.com/qldb/pricing/)|
 
 
 
