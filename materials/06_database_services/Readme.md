@@ -29,7 +29,10 @@ Modernize your data infrastructure with fully managed, purpose-built databases.
 |Database type|Use cases|AWS service|Free Tier Offer Details|Product Pricing|
 |:----|:----|:----|:----|:----|
 |Relational|Traditional applications, enterprise resource planning (ERP), customer relationship management (CRM), ecommerce|Amazon Aurora|NA|[Amazon Aurora Pricing](https://aws.amazon.com/rds/aurora/pricing/)|
-|Relational|Traditional applications, enterprise resource planning (ERP), customer relationship management (CRM), ecommerce|Amazon RDS|12 MONTHS FREE 750 hours per month of db.t2.micro database usage (applicable database engines) 20 GB of general purpose (SSD) database storage 20 GB of storage for database backups and database snapshots|[Amazon RDS Pricing](https://aws.amazon.com/rds/pricing/?p=ft&c=db)|
+|Relational|Traditional applications, enterprise resource planning (ERP), customer relationship management (CRM), ecommerce|Amazon RDS|12 MONTHS FREE 750 hours per month of db.t2.micro database usage (applicable database engines)  
+20 GB of general purpose (SSD) database storage  
+20 GB of storage for database backups and database snapshots  
+|[Amazon RDS Pricing](https://aws.amazon.com/rds/pricing/?p=ft&c=db)|
 |Relational|Traditional applications, enterprise resource planning (ERP), customer relationship management (CRM), ecommerce|Amazon Redshift|2-MONTH FREE TRIAL 750 DC2.Large node hours per month|[Amazon Redshift Pricing](https://aws.amazon.com/redshift/pricing/?p=ft&c=db)|
 |Key-value|High-traffic web applications, ecommerce systems, gaming applications|Amazon DynamoDB|ALWAYS FREE 25 GB of storage 25 units of write capacity 25 units of read capacity (enough to handle up to 200 million requests per month)|[Amazon DynamoDB Pricing](https://aws.amazon.com/dynamodb/pricing/?p=ft&c=db)|
 |In-memory|Caching, session management, gaming leaderboards, geospatial applications|Amazon ElastiCache|12 MONTHS FREE 750 hours of cache.t2micro node usage|[Amazon ElastiCache Pricing](https://aws.amazon.com/elasticache/pricing/?p=ft&c=db)|
