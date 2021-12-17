@@ -17,6 +17,7 @@
 
 ![](images/aws-dbs.png)
 
+
 Modernize your data infrastructure with fully managed, purpose-built databases.
 
  AWS offers 15+ purpose-built engines to support diverse data models, including relational, key-value, document, in-memory, graph, time series, wide column, and ledger databases. Start small and scale as your applications grow with relational databases that are 3-5X faster than popular alternatives, or non-relational databases that give you microsecond to sub-millisecond latency. 
@@ -25,6 +26,7 @@ Modernize your data infrastructure with fully managed, purpose-built databases.
 
  Support multi-region, multi-primary replication, and provide full data oversight with multiple levels of security, including network isolation and end-to-end encryption. AWS databases deliver the high availability, reliability, and security you need for business-critical, enterprise workloads.
 
+## Pricing considerations and free tier details:
 
 |Database type|Use cases|AWS service|Free Tier Offer Details|Product Pricing|
 |:----|:----|:----|:----:|:----|
