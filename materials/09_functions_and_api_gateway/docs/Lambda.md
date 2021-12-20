@@ -35,11 +35,11 @@ You are a systems engineer. The development team asked you to make an applicatio
 
 ### Explanation of the Solution 
 
-[_https://docs.aws.amazon.com/lambda/latest/dg/getting-started.html_](https://docs.aws.amazon.com/lambda/latest/dg/getting-started.html)
+[https://docs.aws.amazon.com/lambda/latest/dg/getting-started.html](https://docs.aws.amazon.com/lambda/latest/dg/getting-started.html)
 
-[_https://aws.amazon.com/lambda/faqs/_](https://aws.amazon.com/lambda/faqs/)
+[https://aws.amazon.com/lambda/faqs/](https://aws.amazon.com/lambda/faqs/)
 
-[_https://www.youtube.com/watch?v=eOBq\_\_h4OJ4&amp;ab\_channel=AmazonWebServices_](https://www.youtube.com/watch?v=eOBq__h4OJ4&amp;ab_channel=AmazonWebServices)
+[https://www.youtube.com/watch?v=eOBq\_\_h4OJ4&amp;ab\_channel=AmazonWebServices](https://www.youtube.com/watch?v=eOBq__h4OJ4&amp;ab_channel=AmazonWebServices)
 
 ### Implementation Details 
 
@@ -113,7 +113,7 @@ https://calculator.aws/#/createCalculator/Lambda
 
 Example of cost calculator:
 
-![](RackMultipart20211220-4-1d9sxea_html_2aaee19bf0142e1b.png)
+![](../images/cost_calculator_example.png)
 
 
 ### Tearing down 
@@ -122,6 +122,3 @@ Example of cost calculator:
     1. Navigate to **Lambda**  >  **Functions**.
     2. Mark **myLambda** , click Actions and choose **Delete**. On the next page click &quot;**Delete**&quot;.
 
-
-
-2. Mark **myLambda** , click Actions and choose **Delete**. On the next page click &quot; **Delete**&quot;.
