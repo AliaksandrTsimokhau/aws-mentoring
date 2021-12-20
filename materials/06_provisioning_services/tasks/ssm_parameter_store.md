@@ -1,5 +1,3 @@
-# Task ID
-
 ## Domain: AWS Provisioning Services
 
 ### Topic: SSM Parameter Store
@@ -41,25 +39,26 @@ We should create the following parameters for dev and prod environments of the t
       - **Value** – DevPassword
 
 1. Click on **Create parameter**
-2. Create parameters for Prod env
-3. Database URL
+2. Create parameters for Prod env:
+    - Database URL
 
-    - **Name** - /my-app/prod/db-url
-    - **Description** – Database URL for my app in Prod
-    - **Tier** - Standard
-    - **Type** – String
-    - **Data type** – text
-    - **Value** – prod.database.dreamdb.org:3306
+        - **Name** - /my-app/prod/db-url
+        - **Description** – Database URL for my app in Prod
+        - **Tier** - Standard
+        - **Type** – String
+        - **Data type** – text
+        - **Value** – prod.database.dreamdb.org:3306
 
-1. Database password
 
-    - **Name** - /my-app/prod/db-password
-    - **Description** – Database password for my app in prod
-    - **Tier** - Standard
-    - **Type** – SecureString
-    - **KMS key source** – My current account
-    - **KMS key ID** – alias/aws/ssm
-    - **Value** – ProdPassword
+    - Database password
+
+        - **Name** - /my-app/prod/db-password
+        - **Description** – Database password for my app in prod
+        - **Tier** - Standard
+        - **Type** – SecureString
+        - **KMS key source** – My current account
+        - **KMS key ID** – alias/aws/ssm
+        - **Value** – ProdPassword
 
     We will use all these parameters in the next tasks
 
