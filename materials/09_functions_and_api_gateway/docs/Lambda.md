@@ -67,7 +67,8 @@ You are a systems engineer. The development team asked you to make an applicatio
             return {
                 'statusCode': 200,
                 'body': json.dumps('Hello from Lambda!'),
-                'time': json.dumps(current_datetime, default=str)
+                'time': json.dumps(current_datetime, default=str),
+                'mytex': event["key1"]
             }
         ```
     1. Click **Deploy**.
