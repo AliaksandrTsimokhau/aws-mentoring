@@ -2,10 +2,22 @@
 
 ## Table of Content:
 
+- [Your goals](#your-goals)
 - CloudWatch
 - Enhanced Monitoring with CloudWatch (EC2 and RDS)
 - EventBridge
 - AWS Health
+
+
+## Your goals
+
+- Know about CloudWatch: Logs/Metrics/Synthetics 
+
+- Explain what AWS EventBridge is and what its use cases are 
+
+- CloudTrail trails/events 
+
+- Know how to view personalized information about events that can affect your AWS infrastructure using AWS Health 
 
 ## CloudWatch 
 
