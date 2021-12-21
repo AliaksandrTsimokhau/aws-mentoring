@@ -4,10 +4,22 @@
 
 ## Table of Content
 
+- [Your goals](#your-goals)
 - API Gateway
 - Lambda
 - Simple Queue Service (SQS)
 - Simple Notification Service (SNS)
+
+## Your goals
+
+- Know what API Gateway is, its features and what it’s used for 
+
+- Know what AWS Lambda is and how does it differ from running an application on EC2 instance 
+
+- Understand AWS Lambda configuration, using CPU allocation, triggers, etc 
+
+- What is a message queue? Message queue vs message bus. Know SQS and SNS use cases. 
+
 
 ## Recommended Trainings:
 
