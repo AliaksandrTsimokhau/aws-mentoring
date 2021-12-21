@@ -68,8 +68,9 @@ You are a systems engineer. The development team asked you to make an applicatio
                 'statusCode': 200,
                 'body': json.dumps('Hello from Lambda!'),
                 'time': json.dumps(current_datetime, default=str),
-                'mytex': event["key1"]
+                'myTex': json.dumps(event["key1"] if 'key1' in event else 'No key')
             }
+
         ```
     1. Click **Deploy**.
 
@@ -79,7 +80,7 @@ You are a systems engineer. The development team asked you to make an applicatio
     2. Click **Test** tab.
     3. In Test event set **New event** and enter to the Name **myEvent**.
     4. In the text editor replace all code with the following:
-        ```JSON
+        ```json
         {
             "key1": "Current time"
         }
@@ -92,14 +93,14 @@ You are a systems engineer. The development team asked you to make an applicatio
             "statusCode": 200,
             "body": "\"Hello from Lambda!\"",
             "time": "\"2021-04-13 08:13:58.992127\"",
-            "myTex": "Current time"
+            "myTex": "\"Current time\""
         }
         ```
 
 
 ### Benefits / Outcomes / Pros and Cons / Summary 
 
-In this task_ _you known how to create Lambda function, and how to test it._ _You also learned how you can run scripts as serverless application without EC2 instance for example.
+In this task you known how to create Lambda function, and how to test it. You also learned how you can run scripts as serverless application without EC2 instance for example.
 
 Serverless is a way to describe the services, practices, and strategies that enable you to build more agile applications so you can innovate and respond to change faster. With serverless computing, infrastructure management tasks like capacity provisioning and patching are handled by AWS, so you can focus on only writing code that serves your customers. Serverless services like [AWS Lambda](https://aws.amazon.com/lambda/) come with automatic scaling, built-in high availability, and a pay-for-value billing model. Lambda is an event-driven compute service that enables you to run code in response to events from over 150 natively-integrated AWS and SaaS sources - all without managing any servers.
 
