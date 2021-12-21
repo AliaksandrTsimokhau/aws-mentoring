@@ -87,10 +87,17 @@ You are a systems engineer. Your development team asked you to make an entry poi
     11. Set Deployment stage to **New Stage** , enter Stage name **prodStage** and click **Deploy**.
     12. In the left menu navigate to **Stages** and click to the **prodStage**.
     13. On the top of just opened page click the **Invoke URL**. Yours application will opened in new window. You will see next response like this:
-        ```json
-        {"statusCode": 200, "body": "\"Hello from Lambda!\"", "time": "\"2021-04-14 10:17:00.801162\""}
-        ```
-
+      ```json
+      {"statusCode": 200, "body": "\"Hello from Lambda!\"", "time": "\"2021-12-21 10:57:41.989515\"", "myTex": "\"No key\""}
+      ```
+    14. (Optional) To check how the data is processed use the following example. Replace request method with one that you have created, and replace URL with one that was used in previous step:
+      ```bash
+      curl --data '{"key1":"Your text here"}' --request GET  https://dak3vw9f7k.execute-api.us-east-1.amazonaws.com/prodStage
+      ```
+      You will see next responce like this:
+      ```json
+      {"statusCode": 200, "body": "\"Hello from Lambda!\"", "time": "\"2021-12-21 11:38:18.331915\"", "myTex": "\"Your text here\""}
+      ```
 ### Benefits / Outcomes / Pros and Cons / Summary 
 
 In this task you known how to create API Gateway entry point to the Labmda function. So, API Gateway is serverless decision how you can get access to you application. API Gateway it&#39;s availability and fault-tolerance AWS resource which makes it possible to simultaneously access several stages (versions) of the application.
@@ -117,7 +124,7 @@ You pay for the API calls you receive and the amount of data transferred out and
 
 1. DeleteAPI Gateway
 
-    1. Navigate to **API Gateway****.**
+    1. Navigate to **API Gateway**.
     2. Mark **myAPI** , click Actions and choose **Delete**. On the next page click **Delete**.
 
 1. Remember to remove Lambda Function from earlier task.
