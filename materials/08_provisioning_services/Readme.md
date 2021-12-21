@@ -2,8 +2,20 @@
 
 ## Table of Content
 
+- [Your goals](#your-goals)
 - Cloudformation
 - Systems Manager
+
+
+## Your goals
+
+- Explain what CloudFormation template and stack are 
+
+- Understand templating basics and change sets 
+
+- Know how to deploy applications using CloudFormation  
+
+- Be able to explain SSM concepts, its categories and use cases 
 
 ## Recommended Trainings:
 
