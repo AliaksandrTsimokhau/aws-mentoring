@@ -2,6 +2,7 @@
 
 ## Table of Content
 
+- [Your goals](#your-goals)
 - [Storage Services](#storage-services)
 - [Elastic Block Storage (EBS)](#elastic-block-storage-ebs)
 - [EBS Snapshots](#ebs-snapshots)
@@ -11,11 +12,30 @@
 - [Simple Storage Service (S3)](#simple-storage-service-s3)
 - [Examples](#examples)
 
-
 ## Recommended Training:
 
 - [AWS Certified Solutions Architect - Associate (SAA-C02): 2 Storage Design](https://learn.epam.com/detailsPage?id=2a69c48d-24e4-4f5d-b89c-e08d0d82ef5d&source=EXTERNAL_COURSE)
 
+## Your goals
+
+
+- Know difference between following storage types: block, file, object. Which AWS services are related to each type? 
+
+- Understand what AWS Elastic Block Storage is used for, know it’s volume types 
+
+- Explain EBS encryption, migration, monitoring and snapshotting, lifecycle manager 
+
+- Know the difference between EBS and EC2 Instance store  
+
+- Understand AWS EFS and its storage classes  
+
+- Know AWS EFS/EFx features and use-cases 
+
+- Know what AWS S3 is, its tiers, what bucket and object are  
+
+- Explain S3 replication, website hosting, ACL, versioning 
+
+- Understand S3 Security 
 
 ## Storage Services
 
