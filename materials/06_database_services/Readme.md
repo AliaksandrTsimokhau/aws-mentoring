@@ -17,25 +17,27 @@
 
 ## Your goals
 
+On a high level:
+
 - Differentiate database types: Relational, NoSQL and In-Memory 
 
-- Be able to explain what AWS RDS is, what features it provides and how to monitor RDS instances 
+- Understand DynamoDB Accelerator(DAX) in DynamoDB 
+
+- Know how to monitor Database Services (key metrics, base and extended monitoring capabilities)
+
+In details:
+
+- Be able to explain what AWS RDS is, what features it provides
 
 - Explain what DynamoDB is for and what elements it has 
 
 - Know about eventually consistent/strongly consistent reads and Read/Write capacity mode in DynamoDB 
 
-- Understand DAX in DynamoDB 
-
 - ElastiCache: Redis vs MemCached 
-
-- EC Redis: Know shards, nodes/EC MemCached: Know clusters, nodes 
 
 - Replication Options / Sharding. Active-passive and Active-Active replication. 
 
 - Backing up Database Services 
-
-- Know how to monitor Database Services 
 
 
 ## Database Services on AWS
