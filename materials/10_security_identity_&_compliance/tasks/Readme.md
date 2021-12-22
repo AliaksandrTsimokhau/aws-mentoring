@@ -74,3 +74,10 @@ For example,
 #### Tearing down
 
 Delete all resources and delete IAM roles/policies, since you cannot delete policy or role that is in use.
+
+
+# Practice
+
+Additional:
+- [IAM hands-on lab](https://general-immersionday-tmp.workshop.aws/en/iam.html)
+- [Key Management: KMS](https://encryption-ws.workshop.aws/keymanagement-kms.html)
