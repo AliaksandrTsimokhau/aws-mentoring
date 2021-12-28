@@ -17,6 +17,8 @@ Almost everything is tied with IAM in AWS!
 
 Very important to understand that every interaction with AWS services is an request to API endpoint - create instance, run Lambda function or observe the billing. All of this availible throug API. Each request passing via HTTPS[1], validating on API endpoint[2], authenticated and authorized on IAM[3] and recording to CloudTrail[4] even the request was unsuccessful.
 
+This means that each small interaction in the AWS authenticated via IAM.
+
 
 ## Use cases / Considerations
 
