@@ -8,6 +8,8 @@
 #### 1. [AWS Cloud Overview](/materials/01_aws_cloud_overview/Readme.md):
 - [AWS Fundamentals](https://aws.amazon.com/getting-started/fundamentals-core-concepts/)
 - [AWS Cloud Practitioner Training](https://youtu.be/3hLmDS179YE)
+- Support Center
+- Service Quotas
 - [**Practice: Creating and configuring Free-tier AWS Account**](/materials/01_aws_cloud_overview/tasks/Readme.md)
 
 #### 2. [Security, Identity & Compliance](/materials/02_security_identity_&_compliance/README.md)
@@ -76,17 +78,11 @@
 - CloudWatch
 - EventBridge
 - AWS Health
-- AWS Config
-- [**Practice**](/materials/10_observability_services/tasks/Readme.md)
-
-#### 11. [Management & Customer Enablement](/materials/11_management_&_customer_enablement/Readme.md)
-- Support Center
-- Service Quotas
 - CloudTrail
 - Trusted Advisor
-- [**Practice**](/materials/11_management_&_customer_enablement/tasks/Readme.md)
+- [**Practice**](/materials/10_observability_services/tasks/Readme.md)
 
-#### 12. AWS Certification Pathways
+#### 11. AWS Certification Pathways
 
 Foundational:
 - [AWS Certified Cloud Practitioner](https://aws.amazon.com/certification/certified-cloud-practitioner/?ch=cta&cta=header&p=2)
@@ -109,7 +105,7 @@ Specialty:
 
 <!-- - https://aws.amazon.com/training/?id=docs_gateway -->
 
-#### 13. [Final Task](/materials/13_Final_Task/Readme.md)
+#### 12. [Final Task](/materials/13_Final_Task/Readme.md)
 
 
 ## Domains:
