@@ -1,8 +1,5 @@
 # IAM – Identity and Access Management
 
-## Recommended Training:
-
-- [AWS Certified Solutions Architect - Associate (SAA-C02): 5 Identity and Access Management](https://learn.epam.com/detailsPage?id=711b13a6-3eba-4d0a-a87c-278c60661983&source=EXTERNAL_COURSE)
 
 ## Service Overview
 
@@ -55,9 +52,17 @@ _**Hint**_: in some cross environment and/or regional cases you could add enviro
 
 
 ## More details
+
+### Videos
 * [IAM ninja (video)](https://www.youtube.com/watch?v=aISWoPf_XNE)
 * [Become an IAM policy master in 60 minutes or less (video)](https://youtu.be/YQsK4MtsELU)
+
+### Documentation
 * [AWS IAM FAQs](https://aws.amazon.com/iam/faqs/)
 * [Policy evaluation logic](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_evaluation-logic.html)
+
+### Recommended Trainings:
+
+- [AWS Certified Solutions Architect - Associate (SAA-C02): 5 Identity and Access Management](https://learn.epam.com/detailsPage?id=711b13a6-3eba-4d0a-a87c-278c60661983&source=EXTERNAL_COURSE)
 
  
