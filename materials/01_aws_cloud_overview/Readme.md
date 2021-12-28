@@ -13,6 +13,10 @@ And of course, do not forget cleaning up all the unnecessary resources after com
 
 - Understand "Shared Responsibility Model" 
 
+- Know about AWS Support
+
+- Learn about AWS Quotas
+
 - Get brief familiarity with AWS provided services and domains 
 
 - Budget alerts 
