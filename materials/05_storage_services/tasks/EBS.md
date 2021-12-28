@@ -1,7 +1,7 @@
 # EBS
 ## Creation, attachment and detachment of volume
 
-1. Create EC2 instance how you did it in lab [Launch EC2 instance](https://git.epam.com/siarhei_beliakou/aws-mentoring/-/blob/master/materials/03_compute_services/tasks/Launch_EC2_instance.md)
+1. Create EC2 instance how you did it in lab [Launch EC2 instance](https://git.epam.com/siarhei_beliakou/aws-mentoring/-/blob/master/materials/04_compute_services/tasks/Launch_EC2_instance.md)
 
 2. Volume creation
 - Go to EC2 console
