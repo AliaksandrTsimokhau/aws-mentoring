@@ -12,6 +12,6 @@ Additional:
 - [Create and Connect to a PostgreSQL Database](https://aws.amazon.com/getting-started/hands-on/create-connect-postgresql-db/)
 - [Setting up a Document Database](https://aws.amazon.com/getting-started/hands-on/getting-started-amazon-documentdb-with-aws-cloud9/?trk=gs_card)
 - [Create and Connect to a MariaDB Database](https://aws.amazon.com/getting-started/hands-on/create-mariadb-db/)
-- [DynamoDB](/materials/06_database_services/docs/DynamoDB_task.docx)
+- [DynamoDB](/materials/07_database_services/docs/DynamoDB_task.docx)
 - [Hands-on labs for amazon DynamoDB](https://amazon-dynamodb-labs.workshop.aws/hands-on-labs.html)
 - [Create and Query a NoSQL Table](https://aws.amazon.com/getting-started/hands-on/create-nosql-table/)

@@ -20,7 +20,7 @@ Reference documentation:
  
 ### Implementation Details  
 
-We can use VPC and SGs made in previous tasks. [Launching Instances in Public and Private Subnets](https://git.epam.com/siarhei_beliakou/aws-mentoring/-/blob/master/materials/02_networking_dns_and_content_delivery/tasks/ec2.md)
+We can use VPC and SGs made in previous tasks. [Launching Instances in Public and Private Subnets](https://git.epam.com/siarhei_beliakou/aws-mentoring/-/blob/master/materials/03_networking_dns_and_content_delivery/tasks/ec2.md)
 
 **Required**: Key Pairs, VPC, Security Group 
 
@@ -100,7 +100,7 @@ We can use VPC and SGs made in previous tasks. [Launching Instances in Public an
 Get rid from autoscaling and move it to another submodule
 
 3. Test Horizontal Scaling 
-    - Connect to one of the EC2 instances via SSH (you need to use bastion like you did in previous tasks [Launching Instances in Public and Private Subnets](https://git.epam.com/siarhei_beliakou/aws-mentoring/-/blob/master/materials/02_networking_dns_and_content_delivery/tasks/ec2.md#connect-to-the-host-in-private-network))
+    - Connect to one of the EC2 instances via SSH (you need to use bastion like you did in previous tasks [Launching Instances in Public and Private Subnets](https://git.epam.com/siarhei_beliakou/aws-mentoring/-/blob/master/materials/03_networking_dns_and_content_delivery/tasks/ec2.md#connect-to-the-host-in-private-network))
 
         ![](../images/ASG_ssh.png)
 
