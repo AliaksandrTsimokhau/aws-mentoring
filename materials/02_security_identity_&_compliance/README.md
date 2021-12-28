@@ -12,6 +12,15 @@ Without IAM, however, you must either create multiple AWS accounts—each with i
 
 Almost everything is tied with IAM in AWS!
 
+## API request flow
+![](images/apiflow.png)
+
+Very important to understand that every interaction with AWS services is an request to API endpoint - create instance, run Lambda function or observe the billing. All of this availible throug API. Each request passing via HTTPS[1], validating on API endpoint[2], authenticated and authorized on IAM[3] and recording to CloudTrail[4] even the request was unsuccessful.
+
+
+---
+![](images/iam_01.png)
+
 ## Use cases / Considerations
 
 ---
