@@ -1,5 +1,6 @@
 # Practice
 
+- [CloudTrail](CloudTrail.md)
 - [EventBridge](../docs/AWS_EventBridge_task.docx)
 
 Additional:
