@@ -1,5 +1,6 @@
 # Practice
-
+https://git.epam.com/siarhei_beliakou/aws-mentoring/-/blob/merging-management-module-2/materials/10_observability_services/tasks/CloudTrail.md
+- [CloudTrail](CloudTrail.md)
 - [EventBridge](../docs/AWS_EventBridge_task.docx)
 
 Additional:
