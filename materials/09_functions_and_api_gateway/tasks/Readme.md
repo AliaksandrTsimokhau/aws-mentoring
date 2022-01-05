@@ -1,7 +1,8 @@
 # Practice
 
-- [API Gateway](../docs/API_Gateway.docx)
-- [Lambda](../docs/Lambda.docx)
+- [Lambda](../docs/Lambda.md)
+- [API Gateway](../docs/API_gateway.md)
+
 
 Additional:
 - [Amazon API Gateway tutorials and workshops](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-tutorials.html)
