@@ -1,7 +1,7 @@
 # Practice
 
 - [CloudTrail](CloudTrail.md)
-- [EventBridge](../docs/AWS_EventBridge_task.docx)
+- [EventBridge](../docs/AWS_EventBridge_task.md)
 
 Additional:
 - [Amazon Cloudwatch Workshop](https://mng.workshop.aws/cloudwatch.html)
