@@ -80,7 +80,7 @@ You are a systems engineer. Your development team asked you to make an entry poi
     4. Choose **New API**. Set API name to **myAPI** and click **Create API**.
     5. On the next page click **Actions** and choose **Create Method**.
     6. Choose **ANY** method and apply yours choice by click to the check marker.
-    7. On the setup page choose **Lambda Function** and below start type your function name to the Lambda Function field &quot;myLambda&quot; then choose the correct name.
+    7. On the setup page choose **Lambda Function** and below start type your function name to the Lambda Function field **&quot;myLambda&quot;** then choose the correct name.
     8. Click **Save**.
     9. On the popup windows agree with add permission to Lambda Function – click **Ok**.
     10. Click **Actions** and choose **Deploy API**.
