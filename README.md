@@ -105,7 +105,7 @@ Specialty:
 
 <!-- - https://aws.amazon.com/training/?id=docs_gateway -->
 
-#### 12. [Final Task](/materials/13_Final_Task/Readme.md)
+#### 12. [Final Task](/materials/12_Final_Task/Readme.md)
 
 
 ## Domains:
