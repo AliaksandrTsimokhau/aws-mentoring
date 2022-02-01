@@ -19,15 +19,11 @@
 ## Your goals
 
 
-- Know difference between following storage types: block, file, object. Which AWS services are related to each type? 
-
-- Understand what AWS Elastic Block Storage is used for, know it’s volume types 
+- Understand what AWS Elastic Block Storage is used for, know it’s volume types 
 
 - Explain EBS encryption, migration, monitoring and snapshotting, lifecycle manager 
 
-- Know the difference between EBS and EC2 Instance store  
-
-- Understand AWS EFS and its storage classes  
+- Understand AWS EFS and its storage classes
 
 - Know AWS EFS/EFx features and use-cases 
 
@@ -36,6 +32,17 @@
 - Explain S3 replication, website hosting, ACL, versioning 
 
 - Understand S3 Security 
+
+## Self check:
+
+1. Between block, file, object, which AWS services are related to each type?
+2. What's the difference between EBS and EC2 Instance store?
+3. If you need to have a folder, that will be used across a number of instance, what service will you use?
+4. How can you replicate an EBS volume?
+5. You have a static pages you want to expose to the Internet, what will you use for that case?
+6. How many ways to allow access to S3 bucket do you know?
+
+
 
 ## Storage Services
 

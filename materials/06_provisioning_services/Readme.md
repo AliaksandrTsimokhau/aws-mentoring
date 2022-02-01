@@ -13,9 +13,18 @@
 
 - Understand templating basics and change sets 
 
-- Know how to deploy applications using CloudFormation  
+- Know how to deploy applications using CloudFormation
 
 - Be able to explain SSM concepts, its categories and use cases 
+
+## Self check:
+
+1. If you dont want to apply updates to CFN template right away, but just check the changes, what do you need?
+2. What will you do to deploy several CFN stacks at once?
+3. Can you deploy a resource on condition using CFN? If yes, how?
+4. How can you use the same template for multiple environments?
+5. Where can you view the results of template execution?
+
 
 ## Recommended Trainings:
 

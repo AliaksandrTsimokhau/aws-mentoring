@@ -20,6 +20,12 @@
 
 - What is a message queue? Message queue vs message bus. Know SQS and SNS use cases. 
 
+## Self-check
+1. What is the biggest benefit of AWS Lambda?
+2. When will you use SQS and when will you use SNS?
+3. What is the use case for combining API GW with Lambda?
+4. You want to collect notifications from all your AWS regions using SNS and forward them to external system. How can you design such solution?
+
 
 ## Recommended Trainings:
 

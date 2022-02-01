@@ -19,8 +19,6 @@
 
 On a high level:
 
-- Differentiate database types: Relational, NoSQL and In-Memory 
-
 - Understand DynamoDB Accelerator(DAX) in DynamoDB 
 
 - Know how to monitor Database Services (key metrics, base and extended monitoring capabilities)
@@ -39,6 +37,16 @@ In details:
 
 - Backing up Database Services 
 
+## Self-check
+
+1. What's the difference between Relational, NoSQL and In-Memory databases?
+2. If you need to store simple data(string/integer) in cache, will you use Redis or Memcached?
+3. When you want to make sure you get the latest data from DynamoDB, which type of read will you use?
+4. You need to make a snapshot in RDS at a specific time, is that possible? If yes, how?
+5. Can you make your RDS instance highly available? If yes, how?
+5. Can you make your DynamoDB highly available? If yes, how?
+6. How can you backup Database services?
+ 
 
 ## Database Services on AWS
 
