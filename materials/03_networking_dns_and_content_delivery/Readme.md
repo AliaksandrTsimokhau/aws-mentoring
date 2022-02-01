@@ -12,17 +12,18 @@
 - [NAT Instances and NAT Gateways](#network-address-translation-nat-instances-and-nat-gateways)
 - [VPC Peering](#vpc-peering)
 - [VPC Flow Logs](#vpc-flow-logs)
+- [Self check](#self-check)
 - [More details](#more-details)
 
 ## Your Goals:
 
 - To get familiar with AWS Network Architecture components: VPC, Subnets, Private/Public subnets layout, Nat Gateways, Routing Tables, Elastic Network Interfaces(ENI) 
-- Explain the difference between Default VPC / Custom VPC, Public/Private Subnets, their usage pros and cons 
 - To know how to establish Cross VPC connectivity: VPC Peering, Transit Gateway 
 - To know how to secure your Networks (NACL and Security Groups, the difference between them) 
 - To get familiar with AWS DNS Service (AmazonProvidedDNS), DHCPs Option Sets 
 - Understand Route53: Public/Private Zones, Types of Records (including CNAME and Aliases) 
 - Learn about AWS CloudFront(Content Delivery Network)
+
 
 ## VPC Overview 
 
@@ -283,6 +284,18 @@ Flow logs do not capture all IP traffic. The following types of traffic are not 
 
 Data ingestion and archival charges for vended logs apply when you publish flow logs to CloudWatch Logs or to Amazon S3. For more information and examples, see [Amazon CloudWatch Pricing](https://aws.amazon.com/ru/cloudwatch/pricing/). 
 
+## Self-check:
+
+1. What is the difference between NAT gateways and NAT instances?
+2. Suppose you’ve assigned a CIDR block to a VPC. Will all the IPs in that block be available for the resources you create in the VPC?
+3. When will you use NACL and when will you use SG? Which of them is stateful and which one is stateless?
+4. What does "local" target mean in terms of an AWS routing table?
+5. How do you connect your VPC to the Internet?
+6. Can you assign multiple IP addresses to an instance?
+7. How can you monitor the network traffic in VPC?
+8. Can you peer VPC with a VPC belonging to another AWS account?
+9. What's the difference between Public and Private subnet?
+10. What's the difference between Default and Custom VPC?
 
 ## More details:
 

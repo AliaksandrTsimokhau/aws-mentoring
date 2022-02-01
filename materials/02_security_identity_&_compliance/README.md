@@ -1,5 +1,28 @@
 # IAM – Identity and Access Management
 
+## Table of Content
+
+- [Your goals](#your-goals)
+- Service Overview
+- IAM Fundamentals
+- IAM Policy
+- [Self-check](#self-check)
+- More details
+
+## Your goals
+
+- Be able to describe identities in IAM
+
+- Understand standard API request flow
+
+- Know what Amazon Resource Number(ARN) is
+
+- Learn about different types of IAM policies and what they consist of
+
+- Be able to tell what types of AWS credentials exist
+
+- Know about IAM Access Analyzer and IAM Policy Simulator
+
 
 ## Service Overview
 
@@ -151,6 +174,19 @@ _**Hint**_: in some cross environment and/or regional cases you could add enviro
 
 ---
 * There is no charge for IAM usage, it's free.
+
+
+## Self-check
+
+1. What is the the difference between IAM identity and IAM principle?
+2. Which type of request to AWS is recorded by CloudTrail?
+3. What's the difference between customer managed IAM policy and AWS managed IAM policy?
+4. How does inline policy differ from managed policy?
+5. What are the limits for inline IAM policy?
+6. What are the best practices when working with permissions?
+7. The AWS CLI credentials and configuration settings take precedence in which order?(name first 3)
+8. What is the allow/deny priority order when policies are configured on different levels (group, user, 
+etc.)?
 
 
 ## More details
