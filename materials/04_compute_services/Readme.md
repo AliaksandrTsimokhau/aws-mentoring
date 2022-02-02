@@ -21,18 +21,18 @@ On a high level:
 - Be able to explain how AWS charges Compute services 
 - Know base monitoring for Compute Services (which metrics provided\not provided by default in CloudWatch)
 - Capabilities of Enhanced Monitoring for Compute Services
-- Differentiate Spot, On-demand and Reserved Instances 
-- Know the difference between Elastic IP and Public IP
 - Get familiar with Public FQDN, Private FQDN naming convention
 - Know what Bastion and Jump servers are
 
-In details:
+## Self check:
 
-- Be familiar with EC2 instances, their types, AMI, Root Volumes, Snapshots, Burstable Instances, CPU Credits 
-- Understand Instance Metadata, User Data, cloud-init and how to troubleshoot it
-- Explain the purpose of usage, base configuration and benefits of Autoscaling, ASG, Launch Templates
-- Be familiar with Load Balancer types, target groups, Listener rules. Be able to choose LB for TLS termination, UDP - traffic, routing, originating source IP. Know on what OSI level each type of LB works
-- Explain what all EC2 Launch Wizard options mean
+1. What load balancing options does the Elastic Load Balancing service offer?
+2. What is the difference between Spot, On-demand and Reserved Instances?
+3. Can you specify the startup script for an EC2 instance? If yes, how?
+4. If you want to scale instance in and out by a metric, what will you use?
+5. How can you specify instance configuration to use, when scaling out?
+6. What will you use to have a static Public IP?
+7. If your application works on port 3000, but you want to have it on port 80, without changing application itself, what will you do?  
 
 
 ##  Elastic Compute Cloud - EC2

@@ -22,6 +22,16 @@ In details:
 - How to login, pull/push images. 
 - Differentiate EC2 and Fargate container engines for ECS
 
+## Self-check
+
+1. You dont want anyone to push a docker image with existing tag, how can you achieve that?
+2. If you want to have a task that is running 100% of the time, what will you use?
+3. Docker images need to be cleaned up every 30 days, what can help with that?
+4. What is the difference between a task and a container?
+5. What's the main benefit of using Fargate on ECS/EKS?
+6. If comparing EKS with other Kubernetes solution, what does EKS offer?
+7. How can you configure EKS/ECS containers to access AWS services and resources?  
+
 ## Elastic Container Registry (ECR)
 
 **Amazon Elastic Container Registry (Amazon ECR)** is an AWS managed container image registry service. Amazon ECR supports private container image repositories with resource-based permissions using AWS IAM. This is so that specified users or Amazon EC2 instances can access your container repositories and images. You can use your preferred CLI to push, pull, and manage **Docker images**, Open Container Initiative (**OCI**) images, and **OCI compatible artifacts**. 

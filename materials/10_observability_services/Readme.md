@@ -23,6 +23,14 @@
 
 - Know how to view personalized information about events that can affect your AWS infrastructure using AWS Health 
 
+## Self-check
+
+1. What's the benefit of having CloudWatch Dashboards?
+2. What monitoring features does CloudWatch provide?
+3. Can you think of a use-case where EventBridge will be used?
+4. What are the categories of checks Trusted Advisor provides?
+5. Are API calls made from the AWS Management Console recorded by CloudTrail?
+
 ## CloudWatch 
 
 ![](images/product-page-diagram_Cloudwatch_v4.55c15d1cc086395cbd5ad279a2f1fc37e8452e77.png)
