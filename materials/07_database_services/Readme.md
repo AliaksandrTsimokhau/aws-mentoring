@@ -17,36 +17,23 @@
 
 ## Your goals
 
-On a high level:
-
-- Understand DynamoDB Accelerator(DAX) in DynamoDB 
-
-- Know how to monitor Database Services (key metrics, base and extended monitoring capabilities)
-
-In details:
 
 - Be able to explain what AWS RDS is, what features it provides
 
 - Explain what DynamoDB is for and what elements it has 
 
-- Know about eventually consistent/strongly consistent reads and Read/Write capacity mode in DynamoDB 
-
-- ElastiCache: Redis vs MemCached 
-
 - Replication Options / Sharding. Active-passive and Active-Active replication. 
 
 - Backing up Database Services 
 
-## Self-check
+- Understand DynamoDB Accelerator(DAX) in DynamoDB 
 
-1. What's the difference between Relational, NoSQL and In-Memory databases?
-2. If you need to store simple data(string/integer) in cache, will you use Redis or Memcached?
-3. When you want to make sure you get the latest data from DynamoDB, which type of read will you use?
-4. You need to make a snapshot in RDS at a specific time, is that possible? If yes, how?
-5. Can you make your RDS instance highly available? If yes, how?
-5. Can you make your DynamoDB highly available? If yes, how?
-6. How can you backup Database services?
- 
+- Know how to monitor Database Services (key metrics, base and extended monitoring capabilities)
+
+- Know about eventually consistent/strongly consistent reads and Read/Write capacity mode in DynamoDB 
+
+- ElastiCache: Redis vs MemCached 
+
 
 ## Database Services on AWS
 
@@ -202,3 +189,15 @@ All info regarding ElastiCache pricing can be found in [AWS docs](https://aws.am
 ## Move to managed databases
 
 - https://aws.amazon.com/getting-started/hands-on/move-to-managed/?trk=gs_card
+
+
+## Self-check
+
+1. What's the difference between Relational, NoSQL and In-Memory databases?
+2. If you need to store simple data(string/integer) in cache, will you use Redis or Memcached?
+3. When you want to make sure you get the latest data from DynamoDB, which type of read will you use?
+4. You need to make a snapshot in RDS at a specific time, is that possible? If yes, how?
+5. Can you make your RDS instance highly available? If yes, how?
+5. Can you make your DynamoDB highly available? If yes, how?
+6. How can you backup Database services?
+ 
