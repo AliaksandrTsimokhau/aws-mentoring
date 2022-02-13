@@ -82,7 +82,14 @@
 - Trusted Advisor
 - [**Practice**](/materials/10_observability_services/tasks/Readme.md)
 
-#### 11. AWS Certification Pathways
+#### 11. [CI/CD with AWS](/materials/11_ci_cd/Readme.md)
+- CI/CD Concepts
+- CodeCommit
+- CodeBuild
+- CodeDeploy
+- CodePipeline
+
+#### 12. AWS Certification Pathways
 
 Foundational:
 - [AWS Certified Cloud Practitioner](https://aws.amazon.com/certification/certified-cloud-practitioner/?ch=cta&cta=header&p=2)
@@ -105,7 +112,7 @@ Specialty:
 
 <!-- - https://aws.amazon.com/training/?id=docs_gateway -->
 
-#### 12. [Final Task](/materials/12_Final_Task/Readme.md)
+#### 13. [Final Task](/materials/12_Final_Task/Readme.md)
 
 
 ## Domains:
